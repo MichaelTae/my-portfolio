@@ -24,6 +24,13 @@ export default function Home() {
               startDelay={0}
             />
           </motion.div>
+          <p>
+            Hello! Welcome to my portfolio page, here I show some of the stuff I
+            have been working on during my education and internship. If you're
+            curious, <br /> make sure to check out the rest of the website!
+            I am currently available for
+            <button className='border relative cursor-none bg-transparent  p-2 text-xl rounded-xl animate-bounce text-orange-500 shadow-md shadow-blue-300 drop-shadow-xl m-2'> Work</button>
+          </p>
         </div>
         <div className='  '>
           <Image
@@ -36,9 +43,8 @@ export default function Home() {
         </div>
       </div>
       <div className=' z-0 relative h-[90vh]   '>
-     <ImageGrid/>
-</div>
-
+        <ImageGrid />
+      </div>
     </main>
   );
 }
