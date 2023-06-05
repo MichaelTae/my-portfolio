@@ -7,10 +7,10 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 const items = [
-  { title: 'User management software', action: 'Action 1', image: '/City.jpg',content:'USER MANAGE',alt:'Picture of user management website' },
-  { title: 'Le mondays', action: 'Action 2', image: '/frog.jpg',content:'LE MONDAYS',alt:'Picture of website le-mondays' },
+  { title: 'User management software', action: 'Action 1', image: '/ManagementSoftware.jpg',content:'USER MANAGE',alt:'Picture of user management website' },
+  { title: 'Le mondays', action: 'Action 2', image: '/leMondays.png',content:'LE MONDAYS',alt:'Picture of website le-mondays' },
   { title: 'Carelyo Dashboard', action: 'Action 3', image: '/bird.jpg',content:'CARELYO',alt:'picture of carelyo dashboard' },
-  { title: 'E-commerce school project', action: 'Action 4',content:'E-COMMERCE',alt:'picture of e-commerce school project' },
+  { title: 'E-commerce school project', action: 'Action 4', image: '/City.jpg',content:'E-COMMERCE',alt:'picture of e-commerce school project' },
   { title: 'Untitled jewelry website ', action: 'Action 5',content:'Jewelry Page',alt:'picture of untitled jewelry page' },
 ];
 
