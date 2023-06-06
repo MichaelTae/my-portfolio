@@ -20,16 +20,25 @@ module.exports = {
           '50%': {
             backgroundPosition: '100% 50%'
           },
-          
-      }
-    },
-    animation: {
-      'background-animation': 'backgroundAnimation 12s ease infinite',
-   
-    },
-      
+        }, 
+        toolTipBounce: {
+          '0%, 100%': { 
+            transform: 'translateY(calc(-100% - 3.5rem))', 
+            'animation-timing-function': 'cubic-bezier(0.8,0,1,1)' 
+          },
+          '50%': { 
+            transform: 'translateY(-50px)',
+             
+            'animation-timing-function': 'cubic-bezier(0.0,0,2,1)' 
+          },
+        },
+      }, 
+      animation: {
+        'background-animation': 'backgroundAnimation 12s ease infinite',
+        'toolTipBounce': 'toolTipBounce 1.5s infinite',
+      },
     },
   },
   plugins: [],
- 
 }
+
