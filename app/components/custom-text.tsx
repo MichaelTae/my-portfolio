@@ -6,6 +6,7 @@ export const TypingText = ({ title, textStyles,startDelay }:{title:string, textS
   <motion.p
     variants={textContainer(startDelay)}
     className={`font-normal text-[14px] text-secondary-white ${textStyles}`}
+    viewport={{ once: true }}
   >
     {Array.from(title).map((letter, index) => (
       <motion.span variants={textVariant2} key={index}>

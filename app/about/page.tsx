@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { AnimatedTextSorting, TypingText } from '../components/custom-text';
-import { motion } from 'framer-motion';
+import { animate, motion } from 'framer-motion';
 import { fadeIn, staggerContainer, textVariant } from '../utils/motion/motion';
 const introParagraph =
   'My name is Michael Stojanovic, I am a recent graduate from Nackademin. There I studied Web development with a focus on .NET CMS. I have a passion for learning new things and I am always looking for new challenges.';
@@ -22,6 +22,7 @@ const AboutPage = () => {
             initial='hidden'
             whileInView={'show'}
             className='p-2   text-slate-300 font-mono z-20 relative bg-slate-900/20  rounded-xl'
+            viewport={{ once: true }}
           >
             {introParagraph}
           </motion.div>
@@ -30,24 +31,25 @@ const AboutPage = () => {
         <div className='flex-1 self-end relative hover:scale-110 transition  mb-2'>
           <div className='absolute inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl '></div>
          
-          <motion.div initial='hidden' whileInView={'show'} >
+          <motion.div initial='hidden' whileInView={'show'} viewport={{ once: true }} >
             {' '}
             <TypingText
               title={introParagraph2}
               textStyles={'p-2  font-mono  text-slate-300 bg-slate-900/20  rounded-xl z-20 relative'}
               startDelay={2}
+              
             />
           </motion.div>
         </div>
         <div className='flex-1 self-start relative  hover:scale-110 transition'>
           <div className='absolute inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl'></div>
-          <motion.div initial='hidden' whileInView='show'  className='p-2  font-mono  text-slate-300 bg-slate-900/20  rounded-xl z-20 relative '>
+          <motion.div viewport={{ once: true }} initial='hidden' whileInView='show'  className='p-2  font-mono  text-slate-300 bg-slate-900/20  rounded-xl z-20 relative '>
             {' '}
-            <motion.span variants={textVariant(0.8)}>
+            <motion.span viewport={{ once: true }} variants={textVariant(0.8)}>
               {' '}
               The languages I'm most comfortable with are C# and Javascript.
             </motion.span>
-            <motion.p variants={textVariant(1.2)}>
+            <motion.p viewport={{ once: true }} variants={textVariant(1.2)}>
               I'm also comfortable with React, Next.js, Tailwind, HTML, CSS,
               SQL, Node.js and .NET. I'm also familiar with Git, Azure DevOps,
               Azure
@@ -67,15 +69,15 @@ const AboutPage = () => {
         <div className='flex-1 self-start relative hover:scale-110 transition' >
           <div className='absolute inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl'></div>
         
-          <motion.div initial='hidden' whileInView='show' className='p-2 flex  font-mono  text-slate-300 bg-slate-900/20  rounded-xl z-20 relative '>
-            <motion.p  variants={fadeIn('down', 'ease-in', 3 * 0.5, 0.75)}>This page is built with React, Next.js and Tailwind.<motion.span  variants={fadeIn('left', 'ease-in', 4 * 0.5, 0.75)}> I'm using framer motion as well for fun animations  </motion.span>
-            <motion.span  variants={fadeIn('right', 'ease-in', 5 * 0.5, 0.75)}>(you can probably tell but i do like animations a little bit too much). </motion.span> </motion.p>
+          <motion.div viewport={{ once: true }} initial='hidden' whileInView='show' className='p-2 flex  font-mono  text-slate-300 bg-slate-900/20  rounded-xl z-20 relative '>
+            <motion.p viewport={{ once: true }} variants={fadeIn('down', 'ease-in', 3 * 0.5, 0.75)}>This page is built with React, Next.js and Tailwind.<motion.span  variants={fadeIn('left', 'ease-in', 4 * 0.5, 0.75)}> I'm using framer motion as well for fun animations  </motion.span>
+            <motion.span viewport={{ once: true }} variants={fadeIn('right', 'ease-in', 5 * 0.5, 0.75)}>(you can probably tell but i do like animations a little bit too much). </motion.span> </motion.p>
             
           </motion.div>
         </div>
-        <motion.div initial='hidden' whileInView='show' className='flex-1  self-end relative mb-2 hover:scale-110 transition'>
+        <motion.div viewport={{ once: true }} initial='hidden' whileInView='show' className='flex-1  self-end relative mb-2 hover:scale-110 transition'>
           <div className='absolute inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl'></div>
-          <motion.p  variants={fadeIn('down', 'ease-in', 3 * 0.5, 0.75)} className='p-2  font-mono  text-slate-300 bg-slate-900/20  rounded-xl z-20 relative'>
+          <motion.p viewport={{ once: true }} variants={fadeIn('down', 'ease-in', 3 * 0.5, 0.75)} className='p-2  font-mono  text-slate-300 bg-slate-900/20  rounded-xl z-20 relative'>
             I have a few projects on my github that you can check out. I have so
             far deployed one website, which is{' '}
             
