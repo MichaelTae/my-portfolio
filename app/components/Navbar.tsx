@@ -30,6 +30,8 @@ const item = {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const[active,setActive]=useState('')
+  console.log(active)
   const isMobile = useMediaQuery('(min-width: 640px)');
   return (
     <nav className=' bg-slate-900 w-full flex flex-col     pb-2 '>
@@ -51,7 +53,7 @@ const Navbar = () => {
           item={item}
         />
       )}
-      {isMobile && <DesktopNav />}
+      {isMobile && <DesktopNav active={active} setActive={setActive}/>}
       </div>
       
      
@@ -61,17 +63,17 @@ const Navbar = () => {
 
 export default Navbar;
 
-const DesktopNav = () => {
+const DesktopNav = ({active, setActive}:{active:string,setActive:Function}) => {
   return (
     <div className='flex gap-4 p-4  place-items-center '>
-      <Link href='/'>Home</Link>
-      <Link href='/projects'>Projects</Link>
-      <Link href='/about'>About</Link>
-      <Link href='/contact'>Contact</Link>
+      <Link onClick={()=> setActive('Home')} className={`${active === 'Home' ? 'text-lime-500' : null}`} href='/'>Home</Link>
+      <Link onClick={()=> setActive('Projects')} className={`${active === 'Projects' ? 'text-lime-500' : null}`} href='/projects'>Projects</Link>
+      <Link onClick={()=> setActive('About')} className={`${active === 'About' ? 'text-lime-500' : null}`}href='/about'>About</Link>
+      <Link onClick={()=> setActive('Contact')} className={`${active === 'Contact' ? 'text-lime-500' : null}`} href='/contact'>Contact</Link>
     </div>
   );
 };
-
+// TODO: Fix mobile nav z-index or something, not workign when overflowing parent. 
 const MobileNav = ({
   setIsOpen,
   isOpen,
@@ -111,13 +113,13 @@ const MobileNav = ({
         }  absolute text-center top-4 right-5   bg-slate-900/50  flex flex-col justify-center items-center gap-4 py-4 w-36 rounded-md `}
       >
         <motion.li variants={item}>
-          <Link href='/'>Home</Link>
+          <Link  href='/'>Home</Link>
         </motion.li>
         <motion.li variants={item}>
-          <Link href='/about'>About</Link>
+          <Link href='/about'>About</Link> 
         </motion.li>
         <motion.li variants={item}>
-          <Link href='/'>Projects</Link>
+          <Link  href='/projects'>Projects</Link>
         </motion.li>
         <motion.li variants={item}>
           <Link href='/'>Contact</Link>
