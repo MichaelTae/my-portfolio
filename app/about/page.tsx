@@ -72,7 +72,7 @@ const AboutPage = () => {
   <a href='https://github.com/MichaelTae' target='_blank' className='group h-40 w-40 z-10 relative rounded-[10rem] place-self-center cursor-pointer z-100'>
     
   <span className="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 container  text-sm text-slate-400 rounded-md absolute  text-center 
-      opacity-0 m-4 mx-auto border border-lime-500/50 animate-toolTipBounce  ">Visit my github!</span>
+       m-4 mx-auto border border-lime-500/50 animate-toolTipBounce  ">Visit my github!</span>
     <Image
       src='/github-mark-white.svg'
       alt='Picture of the author'
