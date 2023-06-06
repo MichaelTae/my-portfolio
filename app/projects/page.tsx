@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { AnimatePresence,motion } from 'framer-motion';
 import AnimatedList from '../components/animatedlist/animated-list';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -122,20 +122,35 @@ const Projects = () => {
       </div>
       <div className=' basis-3/4 border-r border-t border-b overflow-hidden  z-10 relative flex flex-col  border-lime-500/70 rounded-md '>
         <div className='absolute  basis-1/12  bg-lime-900/20  blur-xl w-full h-full rounded-md z-0 '></div>
-        <div className='justify-center flex basis-1/12 z-10  text-lime-500 mx-auto  relative font-mono'>
+        <AnimatePresence mode='wait'>
+        <motion.div key={selectedItem?.action}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }} className='justify-center flex basis-1/12 z-10  text-lime-500 mx-auto  relative font-mono'>
           <span className={`container text-[4cqw] ${styles.textEffect} `}>
             {selectedItem?.title}
           </span>
-        </div>
-        <div className='justify-center  flex  basis-2/12 border-t z-10 border-lime-500 font-mono p-4'>
+        </motion.div>
+        </AnimatePresence>
+        <AnimatePresence mode='wait'>
+        <motion.div key={selectedItem?.action}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}  className='justify-center  flex  basis-2/12 border-t z-10 border-lime-500 font-mono p-4'>
           {selectedItem?.content}{' '}
-        </div>
-        <div className='justify-center  flex basis-9/12 border-t relative border-lime-500'>
+        </motion.div>
+        </AnimatePresence>
+        <AnimatePresence mode='wait'>
+        <motion.div key={selectedItem?.action}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }} className='justify-center  flex basis-9/12 border-t relative border-lime-500'>
           {' '}
           {selectedItem?.image && (
             <Image fill src={selectedItem.image} alt={selectedItem?.alt} />
           )}{' '}
-        </div>
+        </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
