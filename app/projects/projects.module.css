@@ -1,0 +1,15 @@
+.textEffect{
+    text-shadow: 6px 6px 12px #158d06;
+    
+animation: neonSignEffect 4s infinite;
+}
+@keyframes neonSignEffect {
+    0% {
+        text-shadow: 1px 1px 5px #753901;
+      filter: drop-shadow(6px 6px 5px #1fbe0a);
+    }
+    
+    100% {
+      
+    }
+  }
