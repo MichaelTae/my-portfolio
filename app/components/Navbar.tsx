@@ -3,6 +3,7 @@ import Link from 'next/link';
 import {  useState } from 'react';
 import { motion } from 'framer-motion';
 import useMediaQuery from '../utils/hooks/use-mediaQuery';
+
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -30,11 +31,11 @@ const item = {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const[active,setActive]=useState('')
-  console.log(active)
+  const[active,setActive]=useState('Home')
+  
   const isMobile = useMediaQuery('(min-width: 640px)');
   return (
-    <nav className=' bg-slate-900 w-full flex flex-col     pb-2 '>
+    <nav className=' bg-slate-900/50 w-full flex flex-col     pb-2 '>
      <div className='animate-pulse  h-2 relative order-4  shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] drop-shadow-2xl'></div>
       <div className=' flex sticky  '>
         <div className='flex gap-4 p-4 '>
@@ -42,7 +43,7 @@ const Navbar = () => {
             <img src='/icon.png'  alt='logo' className='w-12 h-12 animate-pulse' />
           </Link>
           <Link href='/'>
-            <h1 className='text-2xl font-bold text-white '>Michael Stojanovic</h1>
+            <h1 className='text-2xl font-bold text-slate-300  '>Michael Stojanovic</h1>
           </Link>
         </div>
         {!isMobile && (
@@ -65,11 +66,12 @@ export default Navbar;
 
 const DesktopNav = ({active, setActive}:{active:string,setActive:Function}) => {
   return (
-    <div className='flex gap-4 p-4  place-items-center '>
-      <Link onClick={()=> setActive('Home')} className={`${active === 'Home' ? 'text-lime-500' : null}`} href='/'>Home</Link>
-      <Link onClick={()=> setActive('Projects')} className={`${active === 'Projects' ? 'text-lime-500' : null}`} href='/projects'>Projects</Link>
-      <Link onClick={()=> setActive('About')} className={`${active === 'About' ? 'text-lime-500' : null}`}href='/about'>About</Link>
-      <Link onClick={()=> setActive('Contact')} className={`${active === 'Contact' ? 'text-lime-500' : null}`} href='/contact'>Contact</Link>
+    <div className='flex gap-4 relative mt-1 rounded-md place-items-center font-bold text-slate-300 border-l border-t border-r  border-cyan-700/20  '>
+      <div className='absolute  w-full h-full shadow-[-3px_10px_7px_-6px_rgba(0,0,0,0.3)] shadow-cyan-600/30 animate-pulse z-0 '></div>
+      <Link onClick={()=> setActive('Home')} className={`${active === 'Home' ? 'text-lime-500 scale-95  ' : null}  z-10 border-l border-t ml-1 border-cyan-700  shadow-lg rounded-md lg:px-12 px-8 shadow-cyan-700/40 hover:scale-105 transition-all duration-200`} href='/'>Home</Link>
+      <Link onClick={()=> setActive('Projects')} className={`${active === 'Projects' ? 'text-lime-500 scale-95  ' : null} z-10 border-l border-t  border-cyan-700  shadow-lg rounded-md lg:px-12 px-8 shadow-cyan-700/40  hover:scale-105 transition-all duration-200`} href='/projects'>Projects</Link>
+      <Link onClick={()=> setActive('About')} className={`${active === 'About' ? 'text-lime-500 scale-95  ' : null} z-10 border-l border-t  border-cyan-700  shadow-lg rounded-md lg:px-12 px-8 shadow-cyan-700/40  hover:scale-105 transition-all duration-200`}href='/about'>About</Link>
+      <Link onClick={()=> setActive('Contact')} className={`${active === 'Contact' ? 'text-lime-500 scale-95  ' : null}  z-10 border-t border-r mr-2 border-cyan-700  shadow-lg rounded-md lg:px-12 px-8 shadow-cyan-700/40  hover:scale-105 transition-all duration-200 `} href='/contact'>Contact</Link>
     </div>
   );
 };
