@@ -1,8 +1,9 @@
 'use client';
 import Image from 'next/image';
 import { AnimatedTextSorting, TypingText } from '../components/custom-text';
-import { animate, motion } from 'framer-motion';
-import { fadeIn, staggerContainer, textVariant } from '../utils/motion/motion';
+import { motion } from 'framer-motion';
+import { fadeIn , textVariant } from '../utils/motion/motion';
+
 const introParagraph =
   'My name is Michael Stojanovic, I am a recent graduate from Nackademin. There I studied Web development with a focus on .NET CMS. I have a passion for learning new things and I am always looking for new challenges.';
 const introParagraph2 =

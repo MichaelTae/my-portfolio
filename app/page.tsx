@@ -1,10 +1,7 @@
 'use client';
 import Image from 'next/image';
-import Link from 'next/link';
 import { TitleText, TypingText } from './components/custom-text';
 import { motion } from 'framer-motion';
-import { fadeIn } from './utils/motion/motion';
-import Loader from './components/loader';
 import ImageGrid from './components/imageGrid';
 export default function Home() {
   return (
