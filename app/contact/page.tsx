@@ -41,7 +41,7 @@ const Contact = () => {
           },
         },
       });
-      // TODO: Check hover effect on chrome and if there is a fix.
+      
   return (
     <div className='relative h-[90vh]   '>
         
@@ -144,12 +144,12 @@ const Contact = () => {
         </motion.div>
         <div className='flex flex-col items-center z-10 bg-slate-900/40 h-full w-full rounded-md font-mono  backdrop-blur-md'>
           <h1 className='text-4xl font-bold text-lime-500'>Contact</h1>
-          <div className='border border-lime-500/50 grid  w-full sm:w-[80%] h-[80%] rounded-xl '>
-            <div className='border-b rounded-t-xl border-lime-500/50 items-center backdrop-blur-md bg-slate-100/5 justify-center flex flex-col px-6 sm:px-8 hover:scale-110 transition-all duration-300 hover:z-10 hover:border-none  '>
+          <div className='  grid  w-full sm:w-[80%] h-[80%] rounded-xl '>
+            <div className='border-t border-l border-r rounded-t-xl border-lime-500/50 items-center backdrop-blur-md bg-slate-100/5 justify-center flex flex-col px-6 sm:px-8 hover:scale-110 transition-all duration-300 hover:z-10 hover:border-none  '>
             <span className=' pt-1 text-2xl font-mono'>Make sure to check out my socials, or send me an email!😁  </span>
                  <span className='   text-slate-500 text-xs '>Or don&apos;t, I mean, whatever is fine :(</span>
             </div>
-            <div className='  backdrop-blur-md bg-slate-100/5 justify-center flex px-6 sm:px-8 hover:scale-110 transition-all duration-300 hover:z-10 '>
+            <div className='  border border-lime-500/50 hover:border-none backdrop-blur-md bg-slate-100/5 justify-center flex px-6 sm:px-8 hover:scale-110 transition-all duration-300 hover:z-10 '>
                  
                 <div className='flex flex-row sm:flex-row items-center justify-center'>
                 <a href='https://github.com/MichaelTae' target='_blank' rel="noreferrer" className='flex-col flex hover:scale-110 transition-all '>
@@ -166,10 +166,10 @@ const Contact = () => {
                 </a>
                     </div>
             </div>
-            <div className='border-t rounded-b-xl border-lime-500/50 items-center flex justify-center  backdrop-blur-md bg-slate-100/5 hover:scale-110 transition-all duration-300 hover:z-10 hover:border-none'>
+            <div className='border-b border-r border-l rounded-b-xl border-lime-500/50 items-center flex justify-center  backdrop-blur-md bg-slate-100/5 hover:scale-110 transition-all duration-300 hover:z-10 hover:border-none'>
             
             <div className='flex flex-col h-full w-full '>
-            <p className='text-md sm:text-xl text-center   text-slate-300/80 font-mono'>
+            <p className='text-md sm:text-xl text-center pt-4  text-slate-300/80 font-mono'>
                 Try playing around with the animation gap!
             </p>
             <div className='w-0 h-0 sm:w-full sm:h-10'></div>
