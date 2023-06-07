@@ -57,11 +57,11 @@ const AboutPage = () => {
             {' '}
             <motion.span viewport={{ once: true }} variants={textVariant(0.8)}>
               {' '}
-              The languages I'm most comfortable with are C# and Javascript.
+              The languages I&apos;m most comfortable with are C# and Javascript.
             </motion.span>
             <motion.p viewport={{ once: true }} variants={textVariant(1.2)}>
-              I'm also comfortable with React, Next.js, Tailwind, HTML, CSS,
-              SQL, Node.js and .NET. I'm also familiar with Git, Azure DevOps,
+              I&apos;m also comfortable with React, Next.js, Tailwind, HTML, CSS,
+              SQL, Node.js and .NET. I&apos;m also familiar with Git, Azure DevOps,
               Azure
             </motion.p>
           </motion.div>
@@ -99,7 +99,7 @@ const AboutPage = () => {
               This page is built with React, Next.js and Tailwind.
               <motion.span variants={fadeIn('left', 'ease-in', 4 * 0.5, 0.75)}>
                 {' '}
-                I'm using framer motion as well for fun animations{' '}
+                I&apos;m using framer motion as well for fun animations{' '}
               </motion.span>
               <motion.span
                 viewport={{ once: true }}

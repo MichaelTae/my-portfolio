@@ -43,7 +43,7 @@ const ImageGrid = () => {
     return () => {
       setIsMounted(false);
     };
-  }, [loadingFinished, initialLoad,controls]);
+  }, [loadingFinished, initialLoad,controls,isMounted,images?.length]);
 
   
   return (

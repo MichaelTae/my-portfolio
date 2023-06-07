@@ -10,12 +10,13 @@ const pulseContainer = {
     transition: {
       repeat: Infinity,
       
+      
     },
   },
 };
 
 
-const contact = () => {
+const Contact = () => {
     const isNotXlMonitor = useMediaQuery('(min-width: 1000px)');
 
     const [animationStop, setAnimationStop] = useState(false);
@@ -27,7 +28,7 @@ const contact = () => {
             setChangeAnimationGap(1);
         }
     }, [isNotXlMonitor]);
-    console.log(changeAnimationGap)
+    
     const childVariant = (delay: number) => ({
         animate: {
           opacity: animationStop ? 0.5 :  [0.5, 0.2, 0.5],
@@ -40,7 +41,7 @@ const contact = () => {
           },
         },
       });
-      
+      // TODO: Check hover effect on chrome and if there is a fix.
   return (
     <div className='relative h-[90vh]   '>
         
@@ -146,7 +147,7 @@ const contact = () => {
           <div className='border border-lime-500/50 grid  w-full sm:w-[80%] h-[80%] rounded-xl '>
             <div className='border-b rounded-t-xl border-lime-500/50 items-center backdrop-blur-md bg-slate-100/5 justify-center flex flex-col px-6 sm:px-8 hover:scale-110 transition-all duration-300 hover:z-10 hover:border-none  '>
             <span className=' pt-1 text-2xl font-mono'>Make sure to check out my socials, or send me an email!😁  </span>
-                 <span className='   text-slate-500 text-xs '>Or don't, I mean, whatever is fine :(</span>
+                 <span className='   text-slate-500 text-xs '>Or don&apos;t, I mean, whatever is fine :(</span>
             </div>
             <div className='  backdrop-blur-md bg-slate-100/5 justify-center flex px-6 sm:px-8 hover:scale-110 transition-all duration-300 hover:z-10 '>
                  
@@ -191,4 +192,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

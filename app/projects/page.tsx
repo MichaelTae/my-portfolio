@@ -9,7 +9,7 @@ const items = [
   {
     title: 'User Management Software',
     action: 'Action 1',
-    image: '/ManagementSoftware.jpg',
+    image: '/ManagementSoftware.png',
     content:
       "This is the work I did for my exam. It is more of a mockup/prototype than a finished project. The project is based on the work I did at Swedcon during my internship, for a project called Carelyo. In short, the application consumes an API, which I also created, and displays metrics regarding the users. Not shown in the images is the User/Revenue table where users' information is displayed along with the revenue from the tickets that have been sold. The backend is built with C# .Net 6 and Entity Framework, while the frontend is built with React + Vite.",
     alt: 'Picture of user management website',

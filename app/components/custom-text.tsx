@@ -64,7 +64,7 @@ export const AnimatedTextSorting = ({ delay = 0 }) => {
       clearInterval(intervalId);
       isMounted.current = false;
     };
-  }, [delay]);
+  }, [delay,controls]);
 
   return <motion.p animate={controls} initial={{opacity: 0}} >{headerText}</motion.p>;
 };

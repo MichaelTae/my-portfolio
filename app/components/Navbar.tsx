@@ -38,9 +38,7 @@ const Navbar = () => {
      <div className='animate-pulse  h-2 relative order-4  shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] drop-shadow-2xl'></div>
       <div className=' flex sticky  '>
         <div className='flex gap-4 p-4 '>
-          <Link href='/'>
-            <img src='/logo.png' alt='logo' className='w-12 h-12' />
-          </Link>
+          
           <Link href='/'>
             <h1 className='text-2xl font-bold text-white '>Michael Stojanovic</h1>
           </Link>
