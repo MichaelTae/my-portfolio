@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import useMediaQuery from '../utils/hooks/use-mediaQuery';
-
+import { useRouter,usePathname } from 'next/navigation';
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -31,8 +31,8 @@ const item = {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState('Home');
-
+  const router = useRouter();
+  const path = usePathname();
   const isMobile = useMediaQuery('(min-width: 640px)');
   return (
     <nav className=' bg-slate-900/50 w-full flex flex-col  relative z-30    '>
@@ -60,7 +60,10 @@ const Navbar = () => {
             item={item}
           />
         )}
-        {isMobile && <DesktopNav active={active} setActive={setActive} />}
+        {isMobile && <DesktopNav  path={path} />}
+        <button type="button" onClick={() => router.push('/projects')}>
+      Projects
+    </button>
       </div>
     </nav>
   );
@@ -69,68 +72,68 @@ const Navbar = () => {
 export default Navbar;
 
 const DesktopNav = ({
-  active,
-  setActive,
+
+  path
 }: {
-  active: string;
-  setActive: Function;
+ 
+  path: string;
 }) => {
   return (
     <div className='flex gap-4  relative mt-1 rounded-md place-items-center font-bold text-slate-300 border-l border-t border-r  border-cyan-700/20  '>
       <div className='absolute  w-full h-full shadow-[-3px_10px_7px_-6px_rgba(0,0,0,0.3)] shadow-cyan-600/30 animate-pulse z-0 '></div>
       <Link
-        onClick={() => setActive('Home')}
+        
         className={`${
-          active === 'Home' ? 'text-lime-500 scale-95  ' : null
+          path === '/' ? 'text-lime-500 scale-95  ' : null
         }  z-10 border-l border-t ml-1 border-cyan-700  shadow-lg rounded-md xl:px-8 px-6 shadow-cyan-700/40 hover:scale-105 transition-all duration-200 flex items-center group`}
         href='/'
       >
         Home
         <span
           className={` ${
-            active === 'Home' ? 'rotate-45 hue-rotate-30' : null
+            path === '/' ? 'rotate-45 hue-rotate-30' : null
           } ml-4 h-3 w-3 bg-cyan-700 group-hover:hue-rotate-30 group-hover:rotate-45 duration-300 rounded-sm `}
         ></span>
       </Link>
       <Link
-        onClick={() => setActive('Projects')}
+        
         className={`${
-          active === 'Projects' ? 'text-lime-500 scale-95  ' : null
+          path === '/projects' ? 'text-lime-500 scale-95  ' : null
         } z-10 border-l border-t  border-cyan-700  shadow-lg rounded-md xl:px-8 px-6 shadow-cyan-700/40  hover:scale-105 transition-all duration-200 flex items-center group`}
         href='/projects'
       >
         Projects
         <span
-          className={` ${
-            active === 'Projects' ? 'rotate-45 hue-rotate-30' : null
-          } ml-4 h-3 w-3 bg-cyan-700 group-hover:hue-rotate-30 group-hover:rotate-45 duration-300 rounded-sm `}
-        ></span>
+    className={` ${
+      path === '/projects' ? 'rotate-45 hue-rotate-30' : null
+    } ml-4 h-3 w-3 bg-cyan-700 group-hover:hue-rotate-30 group-hover:rotate-45 duration-300 rounded-sm `}
+  ></span>
       </Link>
       <Link
-        onClick={() => setActive('About')}
+        
         className={`${
-          active === 'About' ? 'text-lime-500 scale-95  ' : null
+          path === '/about' ? 'text-lime-500 scale-95  ' : null
         } z-10 border-l border-t  border-cyan-700  shadow-lg rounded-md xl:px-8 px-6 shadow-cyan-700/40  hover:scale-105 transition-all duration-200 flex items-center group`}
         href='/about'
       >
         About
         <span
-          className={` ${
-            active === 'About' ? 'rotate-45 hue-rotate-30' : null
-          } ml-4 h-3 w-3 bg-cyan-700 group-hover:hue-rotate-30 group-hover:rotate-45 duration-300 rounded-sm `}
-        ></span>
+    className={` ${
+      path === '/about' ? 'rotate-45 hue-rotate-30' : null
+    } ml-4 h-3 w-3 bg-cyan-700 group-hover:hue-rotate-30 group-hover:rotate-45 duration-300 rounded-sm `}
+  ></span>
       </Link>
       <Link
-        onClick={() => setActive('Contact')}
+        
         className={`${
-          active === 'Contact' ? 'text-lime-500 scale-95  ' : null
+          path === '/contact' ? 'text-lime-500 scale-95  ' : null
         }  z-10 border-t border-r mr-2 border-cyan-700  shadow-lg rounded-md xl:px-8 px-6 shadow-cyan-700/40  hover:scale-105 transition-all duration-200 flex items-center group `}
         href='/contact'
       >
         Contact
         <span
           className={` ${
-            active === 'Contact' ? 'rotate-45 hue-rotate-30' : null
+            path === '/contact' ? 'rotate-45 hue-rotate-30' : null
           } ml-4 h-3 w-3 bg-cyan-700 group-hover:hue-rotate-30 group-hover:rotate-45 duration-300 rounded-sm `}
         ></span>
       </Link>
