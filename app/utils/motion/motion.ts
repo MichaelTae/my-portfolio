@@ -71,12 +71,10 @@ export const textVariant = (delay:number) => ({
   });
 
   export const navLayout = {
-    hidden: { opacity: 0,    },
+    hidden: { opacity: 0.2, scale:0.95 },
     show: {
       opacity: 1,
      scale:1,
-      y: 0,
-      x: 0,
       transition: {
         duration: 1,
         ease: 'easeInOut',
