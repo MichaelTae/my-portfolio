@@ -5,6 +5,7 @@ import AnimatedList from '../components/animatedlist/animated-list';
 import Image from 'next/image';
 import { useState } from 'react';
 import styles from './projects.module.css';
+import { navLayout } from '../utils/motion/motion';
 const items = [
   {
     title: 'User Management Software',
@@ -61,6 +62,7 @@ const container = {
   },
 };
 
+
 const item = {
   hidden: { y: -500, opacity: 0 },
   show: {
@@ -81,7 +83,7 @@ const Projects = () => {
   const selectedItem = items.find((item) => item.action === projectChoice);
 
   return (
-    <div className='flex h-[90vh] w-full px-4 pt-4 '>
+    <motion.div initial='hidden' animate='show' variants={navLayout} className='flex h-[90vh] w-full px-4 pt-4 '>
       <div className='grow basis-1/4 '>
         <div className='flex flex-col h-full w-full '>
           <div className=' flex  justify-center '>
@@ -152,7 +154,7 @@ const Projects = () => {
         </motion.div>
         </AnimatePresence>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

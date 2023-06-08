@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import useMediaQuery from '../utils/hooks/use-mediaQuery';
+import { navLayout } from '../utils/motion/motion';
 
 const pulseContainer = {
   animate: {
@@ -43,7 +44,7 @@ const Contact = () => {
       });
       
   return (
-    <div className='relative h-[90vh]   '>
+    <motion.div initial='hidden' animate='show' variants={navLayout} className='relative h-[90vh]   '>
         
       <div className='absolute  m-4 inset-x-0 inset-y-0   '>
         
@@ -188,7 +189,7 @@ const Contact = () => {
           
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

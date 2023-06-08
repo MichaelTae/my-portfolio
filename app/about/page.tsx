@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { AnimatedTextSorting, TypingText } from '../components/custom-text';
 import { motion } from 'framer-motion';
-import { fadeIn , textVariant } from '../utils/motion/motion';
+import { fadeIn , navLayout, textVariant } from '../utils/motion/motion';
 
 const introParagraph =
   'My name is Michael Stojanovic, I am a recent graduate from Nackademin. There I studied Web development with a focus on .NET CMS. I have a passion for learning new things and I am always looking for new challenges.';
@@ -10,7 +10,7 @@ const introParagraph2 =
   'I am currently looking for a job as a junior developer. My education made me full stack so I am comfortable with both frontend and backend. I am also open to learning new languages and frameworks.';
 const AboutPage = () => {
   return (
-    <div className=' flex-1 h-screen gap-3  animate-background-animation bg-[length:400%] bg-gradient-to-r from-indigo-900/70 from-10% via-sky-950/70 via-30% to-emerald-950/70 to-90% p-12  '>
+    <motion.div initial='hidden' animate='show' variants={navLayout} className=' flex-1 h-screen gap-3  animate-background-animation bg-[length:400%] bg-gradient-to-r from-indigo-900/70 from-10% via-sky-950/70 via-30% to-emerald-950/70 to-90% p-12  '>
       <div className='flex relative 2xl:flex-row xl:min-h-[40rem] justify-around items-center gap-4 flex-col bg-slate-700/20 border border-slate-500 rounded-lg  p-4 '>
         <div className=' absolute    w-full h-full blur-sm   bg-slate-700/40  rounded-lg  p-2 '>
           {' '}
@@ -151,7 +151,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
