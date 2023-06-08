@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import useMediaQuery from '../utils/hooks/use-mediaQuery';
 import { usePathname } from 'next/navigation';
 const container = {
   hidden: { opacity: 0 },
@@ -32,7 +31,7 @@ const item = {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const path = usePathname();
-  const isMobile = useMediaQuery('(min-width: 640px)');
+
   return (
     <nav className=' bg-slate-900/50 w-full flex flex-col  relative z-30    '>
       <div className='animate-pulse  h-2 relative order-4 z-0 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] drop-shadow-2xl'></div>
@@ -51,15 +50,17 @@ const Navbar = () => {
             </h1>
           </Link>
         </div>
-        {!isMobile && (
-          <MobileNav
-            setIsOpen={setIsOpen}
-            isOpen={isOpen}
-            container={container}
-            item={item}
-          />
-        )}
-        {isMobile && <DesktopNav  path={path} />}
+        <div className='sm:hidden'>
+      <MobileNav
+        setIsOpen={setIsOpen}
+        isOpen={isOpen}
+        container={container}
+        item={item}
+      />
+    </div>
+   
+      <DesktopNav  path={path} />
+  
        
       </div>
     </nav>
@@ -76,7 +77,7 @@ const DesktopNav = ({
   path: string;
 }) => {
   return (
-    <div className='flex gap-4  relative mt-1 rounded-md place-items-center font-bold text-slate-300 border-l border-t border-r  border-cyan-700/20  '>
+    <div className='sm:flex gap-4 visible hidden relative mt-1 rounded-md place-items-center font-bold text-slate-300 border-l border-t border-r  border-cyan-700/20  '>
       <div className='absolute  w-full h-full shadow-[-3px_10px_7px_-6px_rgba(0,0,0,0.3)] shadow-cyan-600/30 animate-pulse z-0 '></div>
       <Link
         
