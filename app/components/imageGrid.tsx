@@ -48,7 +48,7 @@ const ImageGrid = () => {
   
   return (
     <motion.div
-    className="grid grid-cols-3 h-[100%] w-[100%] absolute overflow-hidden pt-2"
+    className="grid grid-cols-3 h-[100%] w-[100%] z-0 absolute overflow-hidden pt-2"
     initial="hidden"
     animate={controls}
     variants={{

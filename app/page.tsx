@@ -30,7 +30,7 @@ export default function Home() {
             <button className='border relative cursor-default bg-transparent  p-2 text-xl rounded-xl animate-bounce text-orange-500 shadow-md shadow-blue-300 drop-shadow-xl m-2'> Work</button>
           </p>
         </div>
-        <div className='  '>
+        
           <Image
             src='/me.jpg'
             alt='Picture of the author'
@@ -38,7 +38,7 @@ export default function Home() {
             height={100}
             className='h-24 w-24 rounded-[10rem]   mr-4'
           />
-        </div>
+        
       </div>
       <div className=' z-0 relative h-[90vh]   '>
         <ImageGrid />

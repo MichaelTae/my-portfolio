@@ -47,7 +47,7 @@ const AboutPage = () => {
             />
           </motion.div>
         </div>
-        <div className='flex-1 self-start relative  hover:scale-110 transition'>
+        <div className='flex-1 w-full self-start relative  hover:scale-110 transition'>
           <div className='absolute inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl'></div>
           <motion.div
             viewport={{ once: true }}
@@ -116,7 +116,7 @@ const AboutPage = () => {
           viewport={{ once: true }}
           initial='hidden'
           whileInView='show'
-          className='flex-1  self-end relative mb-2 hover:scale-110 transition'
+          className='flex-1 w-full self-end relative mb-2 hover:scale-110 transition'
         >
           <div className='absolute inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl'></div>
           <motion.p
