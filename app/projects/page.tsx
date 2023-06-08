@@ -11,7 +11,7 @@ import jewelPage from '../../public/Jewelpage.jpg';
 import leMondays from '../../public/leMondays.png';
 import managementSoftware from '../../public/ManagementSoftware.png';
 import carelyoDashboard from '../../public/CarelyoDashboard.png';
-import Ecommerce from '../../public/Ecommerce.png';
+import Ecommerce from '../../public/ECommerce.png';
 const items = [
   {
     title: 'User Management Software',
