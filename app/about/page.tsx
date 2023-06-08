@@ -148,7 +148,7 @@ const AboutPage = () => {
           <div className='absolute flex inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl '></div>
           <motion.div viewport={{ once: true }}
             variants={fadeIn('up', 'ease-in', 5 * 0.5, 0.75)} className='  overflow-hidden p-2  font-mono  text-slate-300   z-20 '>
-          I've kinda ran out of things to say about myself but in the interest of symmetry I'll just write a few more lines. Thank you for reading and if you have any questions feel free to contact me!
+          I&apos;ve kinda ran out of things to say about myself but in the interest of symmetry I&apos;ll just write a few more lines. Thank you for reading and if you have any questions feel free to contact me!
           </motion.div>
         </div>
       </div>
