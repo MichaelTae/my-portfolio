@@ -61,9 +61,7 @@ const Navbar = () => {
           />
         )}
         {isMobile && <DesktopNav  path={path} />}
-        <button type="button" onClick={() => router.push('/projects')}>
-      Projects
-    </button>
+       
       </div>
     </nav>
   );
