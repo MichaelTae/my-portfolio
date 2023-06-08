@@ -28,42 +28,42 @@ export const TitleText = ({ title, textStyles }:{title:string, textStyles:string
 );
 
 
+ // Function doesnt work properly with Next routing, Will leave it here for future reference however, it will not be used. 
+// export const AnimatedTextSorting = ({ delay = 0 }) => {
+//   const controls = useAnimation();
+//   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//   const targetValue = "I've kinda ran out of things to say about myself but in the interest of symmetry I'll just write a few more lines. Thank you for reading and if you have any questions feel free to contact me!";
+//   const [headerText, setHeaderText] = useState(targetValue);
 
-export const AnimatedTextSorting = ({ delay = 0 }) => {
-  const controls = useAnimation();
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const targetValue = "I've kinda ran out of things to say about myself but in the interest of symmetry I'll just write a few more lines. Thank you for reading and if you have any questions feel free to contact me!";
-  const [headerText, setHeaderText] = useState(targetValue);
+//   useEffect(() => {
+//     let animationFrameId = 0;
+//     let iteration = 0;
+    
+//     const animateText = () => {
+//       setHeaderText(
+//         targetValue.slice(0, Math.ceil(iteration)) +
+//           targetValue.slice(Math.ceil(iteration)).replace(/./g, () => letters[Math.floor(Math.random() * 26)])
+//       );
+//       if (iteration < targetValue.length) {
+//         iteration += 1 / 3;
+//         animationFrameId = requestAnimationFrame(animateText);
+//       }
+//     };
+    
+//     const timeoutId = setTimeout(() => {
+//       animationFrameId = requestAnimationFrame(animateText);
+//       controls.start({ opacity: 1 }).catch(() => {});
+//     }, delay);
+    
+//     return () => {
+//       clearTimeout(timeoutId);
+//       cancelAnimationFrame(animationFrameId);
+//       controls.stop();
+//     };
+//   }, [delay, controls]);
 
-  useEffect(() => {
-    let animationFrameId = 0;
-    let iteration = 0;
-    
-    const animateText = () => {
-      setHeaderText(
-        targetValue.slice(0, Math.ceil(iteration)) +
-          targetValue.slice(Math.ceil(iteration)).replace(/./g, () => letters[Math.floor(Math.random() * 26)])
-      );
-      if (iteration < targetValue.length) {
-        iteration += 1 / 3;
-        animationFrameId = requestAnimationFrame(animateText);
-      }
-    };
-    
-    const timeoutId = setTimeout(() => {
-      animationFrameId = requestAnimationFrame(animateText);
-      controls.start({ opacity: 1 }).catch(() => {});
-    }, delay);
-    
-    return () => {
-      clearTimeout(timeoutId);
-      cancelAnimationFrame(animationFrameId);
-      controls.stop();
-    };
-  }, [delay, controls]);
-
-  return <motion.p animate={controls} initial={{ opacity: 0 }}>{headerText}</motion.p>;
-};
+//   return <motion.p animate={controls} initial={{ opacity: 0 }}>{headerText}</motion.p>;
+// };
 
 
   
