@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import useMediaQuery from '../utils/hooks/use-mediaQuery';
-import { useRouter,usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -31,7 +31,6 @@ const item = {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
   const path = usePathname();
   const isMobile = useMediaQuery('(min-width: 640px)');
   return (
