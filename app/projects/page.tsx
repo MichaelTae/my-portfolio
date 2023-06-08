@@ -1,11 +1,13 @@
 'use client';
 
-import { AnimatePresence,motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import AnimatedList from '../components/animatedlist/animated-list';
 import Image from 'next/image';
 import { useState } from 'react';
 import styles from './projects.module.css';
 import { navLayout } from '../utils/motion/motion';
+import useMediaQuery from '../utils/hooks/use-mediaQuery';
+
 const items = [
   {
     title: 'User Management Software',
@@ -62,7 +64,6 @@ const container = {
   },
 };
 
-
 const item = {
   hidden: { y: -500, opacity: 0 },
   show: {
@@ -81,19 +82,33 @@ const images = new Array(10).fill(null);
 const Projects = () => {
   const [projectChoice, setProjectChoice] = useState(items[0].action);
   const selectedItem = items.find((item) => item.action === projectChoice);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const isNotMobile = useMediaQuery('(min-width: 640px)');
+  const renderContent = (content: string, limit: number) => {
+    if (content?.length <= limit || isExpanded) {
+      return content;
+    } else {
+      return `${content?.substring(0, limit)}...`;
+    }
+  };
 
   return (
-    <motion.div initial='hidden' animate='show' variants={navLayout} className='flex h-[90vh] w-full px-4 pt-4 '>
+    <motion.div
+      initial='hidden'
+      animate='show'
+      variants={navLayout}
+      className='flex flex-col sm:flex-row h-screen sm:h-[90vh] w-full px-4 pt-4 '
+    >
       <div className='grow basis-1/4 '>
         <div className='flex flex-col h-full w-full '>
           <div className=' flex  justify-center '>
-            <h1 className=' font-extrabold text-4xl  absolute z-10 pt-4 text-lime-500 '>
+            <h1 className=' font-extrabold text-2xl sm:text-3xl md:text-3xl lg:text-4xl z-10 absolute  pt-4 text-lime-500 '>
               My Projects
             </h1>
           </div>
           <div className='grow  relative overflow-hidden '>
             <div className='flex flex-col h-full w-full relative '>
-              <div className=' basis-1/6 p-2 z-10 '>
+              <div className=' px-2 basis-1/6 pt-12 z-10 '>
                 <AnimatedList
                   items={items}
                   setProjectChoice={setProjectChoice}
@@ -122,36 +137,65 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <div className=' basis-3/4 border-r border-t border-b overflow-hidden  z-10 relative flex flex-col  border-lime-500/70 rounded-md '>
-        <div className='absolute  basis-1/12  bg-lime-900/20  blur-xl w-full h-full rounded-md z-0 '></div>
+      <div className=' basis-3/4 border  z-10 relative flex flex-col  border-lime-500/70 rounded-md '>
+        <div className='absolute  basis-1/12  bg-lime-900/20  blur-xl w-full h-full rounded-md z-0 ' />
         <AnimatePresence mode='wait'>
-        <motion.div key={selectedItem?.action}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }} className='justify-center flex basis-1/12 z-10  text-lime-500 mx-auto  relative font-mono'>
-          <span className={`container text-[4cqw] ${styles.textEffect} `}>
-            {selectedItem?.title}
-          </span>
-        </motion.div>
+          <motion.div
+            key={selectedItem?.action}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className='justify-center flex basis-1/12 z-10  text-lime-500 mx-auto  relative font-mono'
+          >
+            <span
+              className={`container sm:text-[4cqw] text-[5cqw] ${styles.textEffect} `}
+            >
+              {selectedItem?.title}
+            </span>
+          </motion.div>
         </AnimatePresence>
         <AnimatePresence mode='wait'>
-        <motion.div key={selectedItem?.action}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}  className='justify-center  flex  basis-2/12 border-t z-10 border-lime-500 font-mono p-4'>
-          {selectedItem?.content}{' '}
-        </motion.div>
+          <motion.div
+            key={selectedItem?.action}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className='justify-center  flex  border-t z-10 border-lime-500 font-mono p-4  text-sm'
+          >
+            {!isNotMobile &&
+              selectedItem &&
+              renderContent(selectedItem.content, 100)}
+            {!isNotMobile &&
+              selectedItem &&
+              selectedItem?.content?.length > 100 && (
+                <button
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className=' flex  m-4 p-1  rounded-md border-t border-cyan-400 text-cyan-400 '
+                >
+                  {isExpanded ? 'Read less' : 'Read more'}
+                </button>
+              )}
+            {isNotMobile && selectedItem && selectedItem?.content}
+          </motion.div>
         </AnimatePresence>
         <AnimatePresence mode='wait'>
-        <motion.div key={selectedItem?.action}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }} className='justify-center  flex basis-9/12 border-t relative border-lime-500'>
-          {' '}
-          {selectedItem?.image && (
-            <Image fill src={selectedItem.image} alt={selectedItem?.alt} />
-          )}{' '}
-        </motion.div>
+          <motion.div
+            key={selectedItem?.action}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className='justify-center flex grow  border-t relative  border-lime-500'
+          >
+            {' '}
+            {selectedItem?.image && (
+              <Image
+                fill
+                src={selectedItem.image}
+                alt={selectedItem?.alt}
+                className='rounded-md '
+              />
+            )}{' '}
+          </motion.div>
         </AnimatePresence>
       </div>
     </motion.div>
