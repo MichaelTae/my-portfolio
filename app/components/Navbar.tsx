@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import Logo from '../icon.png'
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -36,19 +38,22 @@ const Navbar = () => {
     <nav className=' bg-slate-900/50 w-full flex flex-col  relative z-30    '>
       <div className='animate-pulse  h-2 relative order-4 z-0 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] drop-shadow-2xl'></div>
       <div className=' flex sticky  '>
-        <div className='flex gap-4 p-4 '>
-          <Link href='/'>
-            <img
-              src='/icon.png'
+        <div className='flex  gap-4 p-4 '>
+          <Link href='/' className=' '>
+            <Image
+              src={Logo}
               alt='logo'
-              className='w-12 h-12 animate-pulse'
+              className=' animate-pulse'
+             
             />
           </Link>
+          <div className='lg:min-w-[15rem] '>
           <Link href='/'>
-            <h1 className='text-2xl font-bold text-slate-300  '>
+            <h1 className='text-2xl font-bold text-slate-300   '>
               Michael Stojanovic
             </h1>
           </Link>
+          </div>
         </div>
         <div className='sm:hidden'>
       <MobileNav
