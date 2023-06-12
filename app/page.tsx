@@ -32,7 +32,7 @@ export default function Home() {
         </div>
         
           <Image
-            src='/me.jpg'
+            src='/123me.jpg'
             alt='Picture of the author'
             width={100}
             height={100}
