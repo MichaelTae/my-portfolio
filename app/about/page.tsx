@@ -144,7 +144,7 @@ const AboutPage = () => {
             startDelay={4}
           />
         </motion.div>
-        <div className='flex-1  self-start relative hover:scale-110 transition h-64 bg-slate-900/20 rounded-xl max-w-full min-w-0 '>
+        <div className='flex-1  self-start relative hover:scale-110 transition  bg-slate-900/20 rounded-xl max-w-full min-w-0 '>
           <div className='absolute flex inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl '></div>
           <motion.div viewport={{ once: true }}
             variants={fadeIn('up', 'ease-in', 5 * 0.5, 0.75)} className='  overflow-hidden p-2  font-mono  text-slate-300   z-20 '>
