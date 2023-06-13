@@ -6,6 +6,11 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Michael Stojanovic Portfolio',
   description: 'This is a website showcasing projects that I have worked on, as well as a little bit about myself.',
+  creator: 'Michael Stojanovic',
+  verification:{
+    google:'lmaf14H557D6XcgZlkAKd6VXr1WXeoWtIfjauctQlXM'
+  }
+ 
 }
 
 export default function RootLayout({
