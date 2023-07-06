@@ -34,8 +34,8 @@ const Navbar = () => {
   const path = usePathname();
 
   return (
-    <nav className={`${path === '/' ? ' hidden' : 'relative scale-100'} bg-slate-900/50 w-full flex flex-col  z-30    `}>
-      <div className='animate-pulse  h-2 relative order-4 z-0 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] drop-shadow-2xl'></div>
+    <nav className={`${path === '/' ? 'lg:hidden ' : 'relative scale-100'} bg-slate-900/50 w-full flex flex-col  z-30    `}>
+      <div className='animate-pulse pointer-events-none h-2 relative order-4 z-0 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] drop-shadow-2xl'></div>
       <div className=' flex sticky justify-between sm:justify-normal '>
         <div className='flex  gap-4 p-4 '>
          
@@ -151,7 +151,7 @@ const MobileNav = ({
     <>
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className='cursor-pointer  order-1 relative  z-20  p-4 ml-4'
+        className='cursor-pointer  order-1 relative  z-20  p-4 mr-2 mt-1  '
       >
         <svg className='h-8 w-8 fill-current' viewBox='0 0 24 24'>
           <path
@@ -172,28 +172,28 @@ const MobileNav = ({
         animate={isOpen ? 'show' : 'hidden'}
         className={` ${
           isOpen ? 'visible' : 'hidden'
-        }  absolute text-center top-4 right-5 border  bg-slate-900/50 backdrop-blur-sm flex flex-col justify-center items-center gap-4 py-4 w-36 rounded-md `}
+        }  absolute text-center  top-4 right-5 border text-xl bg-slate-900/60   backdrop-blur-sm flex flex-col justify-center items-center gap-4 py-12 w-36 rounded-md font-orbitron`}
       >
-        <motion.li variants={item}>
-          <Link onClick={() => setIsOpen(!isOpen)} href='/'>
+          <Link onClick={() => setIsOpen(!isOpen)} href='/' className='w-full h-full relative border-t  pb-2 border-lime-500 mt-4 '>
+        <motion.li variants={item}  className='pt-3 '>
             Home
-          </Link>
         </motion.li>
-        <motion.li variants={item}>
-          <Link onClick={() => setIsOpen(!isOpen)} href='/about'>
+          </Link>
+          <Link onClick={() => setIsOpen(!isOpen)} href='/about' className='w-full  border-t pb-2 border-lime-500 '>
+        <motion.li variants={item} className='pt-3' >
             About
-          </Link>
         </motion.li>
-        <motion.li variants={item}>
-          <Link onClick={() => setIsOpen(!isOpen)} href='/projects'>
+          </Link>
+          <Link onClick={() => setIsOpen(!isOpen)} href='/projects' className='w-full   border-t pb-2 border-lime-500 '>
+        <motion.li variants={item} className='pt-4'>
             Projects
-          </Link>
         </motion.li>
-        <motion.li variants={item}>
-          <Link onClick={() => setIsOpen(!isOpen)} href='/contact'>
+          </Link>
+          <Link onClick={() => setIsOpen(!isOpen)} href='/contact' className='w-full   border-t  border-lime-500 '>
+        <motion.li variants={item}  className=' pt-3'>
             Contact
-          </Link>
         </motion.li>
+          </Link>
       </motion.ul>
     </>
   );
