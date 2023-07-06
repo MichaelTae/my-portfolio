@@ -11,7 +11,7 @@ const introParagraph2 =
 const AboutPage = () => {
   return (
     <motion.div initial='hidden' animate='show' variants={navLayout} className=' flex-1 h-screen gap-3  animate-background-animation bg-[length:400%] bg-gradient-to-r from-indigo-900/70 from-10% via-sky-950/70 via-30% to-emerald-950/70 to-90% p-12  '>
-      <div className='flex relative 2xl:flex-row xl:min-h-[40rem] justify-around items-center gap-4 flex-col bg-slate-700/20 border border-slate-500 rounded-lg  p-4 '>
+      <div className='flex relative 2xl:flex-row xl:min-h-[40rem] justify-around items-center gap-4 flex-col  bg-slate-700/20 border border-slate-500 rounded-lg  p-4 '>
         <div className=' absolute    w-full h-full blur-sm   bg-slate-700/40  rounded-lg  p-2 '>
           {' '}
         </div>
