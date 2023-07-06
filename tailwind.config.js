@@ -37,6 +37,10 @@ module.exports = {
         'background-animation': 'backgroundAnimation 12s ease infinite',
         'toolTipBounce': 'toolTipBounce 1.5s infinite',
       },
+      fontFamily: {
+        orbitron:['var(--font-orbitron)'],
+        inter:['var(--font-inter)'],
+      },
     },
   },
   plugins: [],
