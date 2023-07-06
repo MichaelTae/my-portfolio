@@ -45,8 +45,9 @@ export const textVariant = (delay:number) => ({
       opacity: 1,
       y: 0,
       transition: {
-        type: 'tween',
-        ease: 'easeIn',
+        type: 'ease',
+        ease: 'easeOut',
+        duration: 0.5,
       },
     },
   };
