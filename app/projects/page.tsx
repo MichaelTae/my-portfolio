@@ -12,6 +12,7 @@ import leMondays from '../../public/leMondays.png';
 import managementSoftware from '../../public/ManagementSoftware.png';
 import carelyoDashboard from '../../public/CarelyoDashboard.png';
 import Ecommerce from '../../public/ECommerce.png';
+import ImageModal from '../components/imageModal';
 const items = [
   {
     title: 'User Management Software',
@@ -88,6 +89,10 @@ const Projects = () => {
   const selectedItem = items.find((item) => item.action === projectChoice);
   const [isExpanded, setIsExpanded] = useState(false);
   const isNotMobile = useMediaQuery('(min-width: 640px)');
+  const [openImageModal, setOpenImageModal] = useState(false);
+  const handleModal = () => {
+    setOpenImageModal(!openImageModal);
+  };
   const renderContent = (content: string, limit: number) => {
     if (content?.length <= limit || isExpanded) {
       return content;
@@ -101,12 +106,12 @@ const Projects = () => {
       initial='hidden'
       animate='show'
       variants={navLayout}
-      className='flex flex-col sm:flex-row h-screen sm:h-[90vh] w-full px-4 pt-4 '
+      className='flex flex-col sm:flex-row h-screen sm:h-[92.5vh] w-full  pt-4 '
     >
       <div className='grow basis-1/4 '>
         <div className='flex flex-col h-full w-full '>
           <div className=' flex  justify-center '>
-            <h1 className=' font-extrabold text-2xl sm:text-3xl md:text-3xl lg:text-4xl z-10 absolute  pt-4 text-lime-500 '>
+            <h1 className=' font-extrabold text-2xl sm:text-3xl md:text-3xl lg:text-4xl z-10 absolute  pt-4 text-lime-500 font-orbitron '>
               My Projects
             </h1>
           </div>
@@ -152,7 +157,7 @@ const Projects = () => {
             className='justify-center flex basis-1/12 z-10  text-lime-500 mx-auto  relative font-mono'
           >
             <span
-              className={`container sm:text-[4cqw] text-[5cqw] ${styles.textEffect} `}
+              className={`container sm:text-[4cqw] text-[5cqw] ${styles.textEffect} font-orbitron`}
             >
               {selectedItem?.title}
             </span>
@@ -188,20 +193,22 @@ const Projects = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className='justify-center flex grow  border-t relative  border-lime-500 overflow-hidden'
+            className='justify-center flex grow  border-t relative  border-lime-500 overflow-hidden cursor-pointer '
+            onClick={() => setOpenImageModal(true)}
           >
             {' '}
             {selectedItem?.image && (
               <Image
                 src={selectedItem?.image}
                 alt={selectedItem?.alt}
-                className='rounded-md '
+                className='rounded-md object-fill '
                 placeholder='blur'
                 
               />
             )}{' '}
           </motion.div>
         </AnimatePresence>
+        <ImageModal isOpen={openImageModal} title={selectedItem?.title} image={selectedItem?.image} onClose={handleModal} />
       </div>
     </motion.div>
   );
