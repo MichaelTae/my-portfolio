@@ -44,7 +44,7 @@ const Contact = () => {
       });
       
   return (
-    <motion.div initial='hidden' animate='show' variants={navLayout} className='relative h-[92.5vh]   '>
+    <motion.div initial='hidden' animate='show' variants={navLayout} className='relative h-[92.5vh]    '>
         
       <div className='absolute  inset-x-0 inset-y-0   '>
         
@@ -143,8 +143,8 @@ const Contact = () => {
                           key={animationStop.toString() + "24"} /></>}
         
         </motion.div>
-        <div className='flex flex-col items-center z-10 bg-slate-900/40 h-full w-full rounded-md font-mono px-2  backdrop-blur-md'>
-          <h1 className='text-4xl font-bold text-lime-500'>Contact</h1>
+        <div className='flex flex-col items-center z-10 bg-slate-900/40 h-full w-full rounded-md font-mono px-2  backdrop-blur-md pt-4'>
+          <h1 className='text-4xl font-bold text-lime-500 font-orbitron pb-2'>Contact</h1>
           <div className='  grid  w-full sm:w-[80%] h-[80%] rounded-xl '>
             <div className='border-t border-l border-r rounded-t-xl border-lime-500/50 items-center backdrop-blur-md bg-slate-100/5 justify-center flex flex-col px-6 sm:px-8 hover:scale-110 transition-all duration-300 hover:z-10 hover:border-none  '>
             <span className=' pt-1 text-2xl font-mono'>Make sure to check out my socials, or send me an email!😁  </span>
