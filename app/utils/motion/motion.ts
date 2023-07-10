@@ -31,7 +31,7 @@ export const textVariant = (delay:number) => ({
     },
     show: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.1, delayChildren: i * delay },
+      transition: { staggerChildren: 0.05, delayChildren: i * delay },
       
     }),
   });
