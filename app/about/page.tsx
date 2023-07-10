@@ -20,11 +20,11 @@ const AboutPage = () => {
     >
       
             <Grid  />
-      <div className='flex relative backdrop-blur-[2px] 2xl:flex-row xl:min-h-[40rem] justify-around items-center gap-4 flex-col m-12  bg-slate-700/20 border border-slate-500 rounded-lg  p-4 text-lg '>
+      <div className='flex  relative backdrop-blur-[2px] 2xl:flex-row xl:min-h-[40rem] justify-around items-center gap-4 flex-col m-12  bg-slate-700/20 border border-slate-500 rounded-lg  p-4 text-lg '>
         <div className=' absolute  border  w-full h-full blur-sm   bg-slate-700/40  rounded-lg  p-2 '>
           {' '}
         </div>
-        <div className='flex-1 self-start relative hover:scale-110 transition '>
+        <div className='flex-1 self-start relative  hover:scale-110 transition '>
           <div className='absolute inset-0 z-10  place-self-center shadow-md shadow-blue-500 border-teal-700 border rounded-xl animate-pulse p-6'></div>
 
           <motion.div
@@ -38,7 +38,7 @@ const AboutPage = () => {
           </motion.div>
         </div>
 
-        <div className='flex-1 self-end relative hover:scale-110 transition  mb-2'>
+        <div className='flex-1 self-end relative hover:scale-110 transition   mb-2'>
           <div className='absolute inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl '></div>
 
           <motion.div
@@ -52,7 +52,7 @@ const AboutPage = () => {
               textStyles={
                 'p-2    text-slate-300 bg-slate-900/50    rounded-xl z-20 relative text-lg '
               }
-              startDelay={2}
+              startDelay={0}
             />
           </motion.div>
         </div>
@@ -112,8 +112,8 @@ const AboutPage = () => {
       
         </div>
 
-        <div className='flex-1 self-start relative hover:scale-110 transition-all'>
-          <div className='absolute inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl'></div>
+        <div className='flex-1 self-start relative hover:scale-110 transition-all mt-32 2xl:mt-0 '>
+          <div className='absolute inset-0  z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl'></div>
 
           <motion.div
             viewport={{ once: true }}
@@ -125,17 +125,18 @@ const AboutPage = () => {
               viewport={{ once: true }}
               variants={fadeIn('down', 'ease-in', 3 * 0.5, 0.75)}
             >
-              This page is built with React, Next.js and Tailwind.
+              This page is built with React, Next.js , Tailwind and the interactable parts of the background on the homepage is made with illustrator
               <motion.span variants={fadeIn('left', 'ease-in', 4 * 0.5, 0.75)}>
                 {' '}
-                I&apos;m using framer motion as well for fun animations{' '}
+                I&apos;m using framer motion also for fun...? animations,{' '}
               </motion.span>
               <motion.span
                 viewport={{ once: true }}
                 variants={fadeIn('right', 'ease-in', 5 * 0.5, 0.75)}
+                
               >
-                (you can probably tell but i do like animations a little bit too
-                much).{' '}
+                
+                (i do like animations quite a lot).{' '}
               </motion.span>{' '}
             </motion.p>
           </motion.div>
@@ -144,7 +145,7 @@ const AboutPage = () => {
           viewport={{ once: true }}
           initial='hidden'
           whileInView='show'
-          className='flex-1 w-full self-end  relative mb-2 hover:scale-110 transition'
+          className='flex-1 w-full self-end  relative my-4 sm:my-0 2xl:my-2   hover:scale-110 transition'
         >
           <div className='absolute inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl'></div>
           <motion.p
@@ -182,7 +183,7 @@ const AboutPage = () => {
             I&apos;ve kinda ran out of things to say about myself but in the
             interest of symmetry I&apos;ll just write a few more lines. Thank
             you for reading and if you have any questions feel free to contact
-            me!
+            me on the next page {'--->'}
           </motion.div>
         </div>
         
