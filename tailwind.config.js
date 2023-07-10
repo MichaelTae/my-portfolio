@@ -32,10 +32,17 @@ module.exports = {
             'animation-timing-function': 'cubic-bezier(0.0,0,2,1)' 
           },
         },
+        reflection:{
+          
+          '50%':{
+            opacity: '0.05',
+          }
+        }
       }, 
       animation: {
-        'background-animation': 'backgroundAnimation 12s ease infinite',
+        'background-animation': 'backgroundAnimation 22s ease infinite',
         'toolTipBounce': 'toolTipBounce 1.5s infinite',
+        'reflection': 'reflection 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       fontFamily: {
         orbitron:['var(--font-orbitron)'],
