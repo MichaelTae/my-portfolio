@@ -172,25 +172,25 @@ const MobileNav = ({
         animate={isOpen ? 'show' : 'hidden'}
         className={` ${
           isOpen ? 'visible' : 'hidden'
-        }  absolute text-center  top-4 right-5 border text-xl bg-slate-900/60   backdrop-blur-sm flex flex-col justify-center items-center gap-4 py-12 w-36 rounded-md font-orbitron`}
+        }  absolute text-center  top-4 right-5 border text-xl bg-slate-900/60   backdrop-blur-sm flex flex-col   pt-12 w-36 rounded-md font-orbitron`}
       >
-          <Link onClick={() => setIsOpen(!isOpen)} href='/' className='w-full h-full relative border-t  pb-2 border-lime-500 mt-4 '>
-        <motion.li variants={item}  className='pt-3 '>
+          <Link onClick={() => setIsOpen(!isOpen)} href='/' className='w-full h-full relative border-t pt-2 pb-2 border-lime-500 mt-4 '>
+        <motion.li variants={item}  className=' w-full h-full  '>
             Home
         </motion.li>
           </Link>
-          <Link onClick={() => setIsOpen(!isOpen)} href='/about' className='w-full  border-t pb-2 border-lime-500 '>
-        <motion.li variants={item} className='pt-3' >
+          <Link onClick={() => setIsOpen(!isOpen)} href='/about' className='w-full relative border-t   pb-2 border-lime-500 pt-2'>
+        <motion.li variants={item} className=' w-full h-full ' >
             About
         </motion.li>
           </Link>
-          <Link onClick={() => setIsOpen(!isOpen)} href='/projects' className='w-full   border-t pb-2 border-lime-500 '>
-        <motion.li variants={item} className='pt-4'>
+          <Link onClick={() => setIsOpen(!isOpen)} href='/projects' className='w-full flex relative text-center   border-t pb-2 border-lime-500 pt-2'>
+        <motion.li variants={item} className='w-full h-full '>
             Projects
         </motion.li>
           </Link>
-          <Link onClick={() => setIsOpen(!isOpen)} href='/contact' className='w-full   border-t  border-lime-500 '>
-        <motion.li variants={item}  className=' pt-3'>
+          <Link onClick={() => setIsOpen(!isOpen)} href='/contact' className='w-full relative flex  border-t  border-lime-500 pt-2 pb-2'>
+        <motion.li variants={item}  className='   w-full h-full '>
             Contact
         </motion.li>
           </Link>
