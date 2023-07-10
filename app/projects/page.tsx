@@ -12,7 +12,7 @@ import leMondays from '../../public/leMondays.png';
 import managementSoftware from '../../public/ManagementSoftware.png';
 import carelyoDashboard from '../../public/CarelyoDashboard.png';
 import Ecommerce from '../../public/ECommerce.png';
-import ImageModal from '../components/imageModal';
+import ImageModal from '../components/modal/imageModal';
 const items = [
   {
     title: 'User Management Software',
@@ -169,7 +169,7 @@ const Projects = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className='justify-center  flex  border-t z-10 border-lime-500 font-mono p-4  text-sm'
+            className='justify-center  flex  border-t z-10 border-lime-500 font-mono p-4  '
           >
             {!isNotMobile &&
               selectedItem &&
@@ -193,7 +193,7 @@ const Projects = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className='justify-center flex grow  border-t relative  border-lime-500 overflow-hidden cursor-pointer '
+            className='justify-center flex grow  border-t relative  border-lime-500 overflow-hidden cursor-pointer group'
             onClick={() => setOpenImageModal(true)}
           >
             {' '}
@@ -201,14 +201,18 @@ const Projects = () => {
               <Image
                 src={selectedItem?.image}
                 alt={selectedItem?.alt}
-                className='rounded-md object-fill '
+                className='rounded-md  w-full h-full object-fill'
                 placeholder='blur'
                 
               />
             )}{' '}
+            <div className='absolute border border-lime-500/20 bottom-0 w-full h-[12%] backdrop-blur-sm text-center font-inter text-lg text-lime-500 backdrop-brightness-[.3]  group-hover:opacity-100 opacity-0 transition-all duration-1000 delay-500'>Click to open image</div>
           </motion.div>
         </AnimatePresence>
-        <ImageModal isOpen={openImageModal} title={selectedItem?.title} image={selectedItem?.image} onClose={handleModal} />
+    <AnimatePresence initial={false} mode='wait' onExitComplete={() => null}>
+
+        {openImageModal && <ImageModal  title={selectedItem?.title} image={selectedItem?.image} onClose={handleModal} />}
+    </AnimatePresence>
       </div>
     </motion.div>
   );
