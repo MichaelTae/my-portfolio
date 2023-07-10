@@ -90,7 +90,6 @@ const Grid = () => {
     setStop(false);
   }, [startPosition]);
   const isNotMobile = useMediaQuery('(min-width: 800px)');
-  console.log(isNotMobile);
   return (
     <>
       <div
