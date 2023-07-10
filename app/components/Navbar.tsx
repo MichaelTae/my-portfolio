@@ -80,7 +80,7 @@ const DesktopNav = ({
         
         className={`${
           path === '/' ? 'text-lime-500 scale-95  ' : null
-        }  z-10 border-l border-t ml-1 border-cyan-700  shadow-lg rounded-md xl:px-8 px-6 shadow-cyan-700/40 hover:scale-105 transition-all duration-200 flex items-center group`}
+        }  z-10 border-l border-t ml-1 border-cyan-700  shadow-lg rounded-md xl:px-8 px-6 shadow-cyan-700/40 active:scale-100 hover:scale-105 transition-all duration-200 flex items-center group`}
         href='/'
       >
         Home
@@ -94,7 +94,7 @@ const DesktopNav = ({
         
         className={`${
           path === '/projects' ? 'text-lime-500 scale-95  ' : null
-        } z-10 border-l border-t  border-cyan-700  shadow-lg rounded-md xl:px-8 px-6 shadow-cyan-700/40  hover:scale-105 transition-all duration-200 flex items-center group`}
+        } z-10 border-l border-t  border-cyan-700  shadow-lg rounded-md xl:px-8 px-6 shadow-cyan-700/40 active:scale-100 hover:scale-105 transition-all duration-200 flex items-center group`}
         href='/projects'
       >
         Projects
@@ -108,7 +108,7 @@ const DesktopNav = ({
         
         className={`${
           path === '/about' ? 'text-lime-500 scale-95  ' : null
-        } z-10 border-l border-t  border-cyan-700  shadow-lg rounded-md xl:px-8 px-6 shadow-cyan-700/40  hover:scale-105 transition-all duration-200 flex items-center group`}
+        } z-10 border-l border-t  border-cyan-700  shadow-lg rounded-md xl:px-8 px-6 shadow-cyan-700/40 active:scale-100 hover:scale-105 transition-all duration-200 flex items-center group`}
         href='/about'
       >
         About
@@ -122,7 +122,7 @@ const DesktopNav = ({
         
         className={`${
           path === '/contact' ? 'text-lime-500 scale-95  ' : null
-        }  z-10 border-t border-r mr-2 border-cyan-700  shadow-lg rounded-md xl:px-8 px-6 shadow-cyan-700/40  hover:scale-105 transition-all duration-200 flex items-center group `}
+        }  z-10 border-t border-r mr-2 border-cyan-700  shadow-lg rounded-md xl:px-8 px-6 shadow-cyan-700/40 active:scale-100 hover:scale-105 transition-all duration-200 flex items-center group `}
         href='/contact'
       >
         Contact
