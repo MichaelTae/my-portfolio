@@ -44,7 +44,7 @@ const Contact = () => {
       });
       
   return (
-    <motion.div initial='hidden' animate='show' variants={navLayout} className='relative h-[92.5vh]    '>
+    <motion.div initial='hidden' animate='show' variants={navLayout} className='relative h-[92.5vh]  overflow-hidden  '>
         
       <div className='absolute  inset-x-0 inset-y-0   '>
         
