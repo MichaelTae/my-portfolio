@@ -88,7 +88,7 @@ const Projects = () => {
   const [projectChoice, setProjectChoice] = useState(items[0].action);
   const selectedItem = items.find((item) => item.action === projectChoice);
   const [isExpanded, setIsExpanded] = useState(false);
-  const isNotMobile = useMediaQuery('(min-width: 640px)');
+  const isNotMobile = useMediaQuery('(min-width: 1024px)');
   const [openImageModal, setOpenImageModal] = useState(false);
   const handleModal = () => {
     setOpenImageModal(!openImageModal);
@@ -106,17 +106,17 @@ const Projects = () => {
       initial='hidden'
       animate='show'
       variants={navLayout}
-      className='flex flex-col sm:flex-row h-screen sm:h-[92.5vh] w-full  pt-4 '
+      className='flex flex-col lg:flex-row h-screen sm:h-[92.5vh] w-full  pt-4 '
     >
       <div className='grow basis-1/4 '>
-        <div className='flex flex-col h-full w-full '>
+        <div className='flex flex-col h-full w-full sm:mb-2 lg:mb-0 '>
           <div className=' flex  justify-center '>
             <h1 className=' font-extrabold text-2xl sm:text-3xl md:text-3xl lg:text-4xl z-10 absolute  pt-4 text-lime-500 font-orbitron '>
               My Projects
             </h1>
           </div>
-          <div className='grow  relative overflow-hidden '>
-            <div className='flex flex-col h-full w-full relative '>
+          <div className='grow  relative  '>
+            <div className='flex flex-col h-full w-full relative bottom-0 sm:bottom-48 lg:bottom-0'>
               <div className=' px-2 basis-1/6 pt-12 z-10 '>
                 <AnimatedList
                   items={items}
@@ -146,7 +146,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <div className=' basis-3/4 border  z-10 relative flex flex-col  border-lime-500/70 rounded-md '>
+      <div className=' basis-3/4 border  z-10 relative flex flex-col mt-2 border-lime-500/70 rounded-md '>
         <div className='absolute  basis-1/12  bg-lime-900/20  blur-xl w-full h-full rounded-md z-0 ' />
         <AnimatePresence mode='wait'>
           <motion.div

@@ -20,11 +20,11 @@ const AboutPage = () => {
     >
       
             <Grid  />
-      <div className='flex  relative backdrop-blur-[2px] 2xl:flex-row xl:min-h-[40rem] justify-around items-center gap-4 flex-col m-12  bg-slate-700/20 border border-slate-500 rounded-lg  p-4 text-lg '>
+      <div className='flex  relative backdrop-blur-[2px] 2xl:flex-row xl:min-h-[40rem] justify-around items-center gap-4 flex-col 2xl:m-12 m-8  bg-slate-700/20 border border-slate-500 rounded-lg  p-4 text-lg '>
         <div className=' absolute  border  w-full h-full blur-sm   bg-slate-700/40  rounded-lg  p-2 '>
           {' '}
         </div>
-        <div className='flex-1 self-start relative  hover:scale-110 transition '>
+        <div className='flex-1 self-start relative  hover:scale-[1.02] transition '>
           <div className='absolute inset-0 z-10  place-self-center shadow-md shadow-blue-500 border-teal-700 border rounded-xl animate-pulse p-6'></div>
 
           <motion.div
@@ -38,7 +38,7 @@ const AboutPage = () => {
           </motion.div>
         </div>
 
-        <div className='flex-1 self-end relative hover:scale-110 transition   mb-2'>
+        <div className='flex-1 self-end relative hover:scale-[1.02] transition   mb-2'>
           <div className='absolute inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl '></div>
 
           <motion.div
@@ -56,7 +56,7 @@ const AboutPage = () => {
             />
           </motion.div>
         </div>
-        <div className='flex-1 w-full self-start relative  hover:scale-110 transition'>
+        <div className='flex-1 w-full self-start relative  hover:scale-[1.02] transition'>
           <div className='absolute inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl'></div>
           <motion.div
             viewport={{ once: true }}
@@ -112,7 +112,7 @@ const AboutPage = () => {
       
         </div>
 
-        <div className='flex-1 self-start relative hover:scale-110 transition-all mt-32 2xl:mt-0 '>
+        <div className='flex-1 self-start relative hover:scale-[1.02] transition-all mt-32 2xl:mt-0 '>
           <div className='absolute inset-0  z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl'></div>
 
           <motion.div
@@ -145,7 +145,7 @@ const AboutPage = () => {
           viewport={{ once: true }}
           initial='hidden'
           whileInView='show'
-          className='flex-1 w-full self-end  relative my-4 sm:my-0 2xl:my-2   hover:scale-110 transition'
+          className='flex-1 w-full self-end  relative my-4 sm:my-0 2xl:my-2   hover:scale-[1.02] transition '
         >
           <div className='absolute inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl'></div>
           <motion.p
@@ -173,7 +173,7 @@ const AboutPage = () => {
             startDelay={4}
           />
         </motion.div>
-        <div className='flex-1  self-start relative hover:scale-110 transition  bg-slate-900/50   rounded-xl max-w-full min-w-0 '>
+        <div className='flex-1  self-start relative hover:scale-[1.02] transition  bg-slate-900/50   rounded-xl max-w-full min-w-0 '>
           <div className='absolute flex inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl '></div>
           <motion.div
             viewport={{ once: true }}

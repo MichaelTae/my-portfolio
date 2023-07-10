@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <nav className={`${path === '/' ? 'lg:hidden ' : 'relative scale-100'} bg-slate-900/50 w-full flex flex-col  z-30    `}>
       <div className='animate-pulse pointer-events-none h-2 relative order-4 z-0 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] drop-shadow-2xl'></div>
-      <div className=' flex sticky justify-between sm:justify-normal '>
+      <div className=' flex sticky justify-between lg:justify-normal '>
         <div className='flex  gap-4 p-4 '>
          
           <div className='lg:min-w-[15rem] '>
@@ -47,7 +47,7 @@ const Navbar = () => {
           </Link>
           </div>
         </div>
-        <div className='sm:hidden '>
+        <div className='md:hidden  '>
       <MobileNav
         setIsOpen={setIsOpen}
         isOpen={isOpen}
@@ -74,7 +74,7 @@ const DesktopNav = ({
   path: string;
 }) => {
   return (
-    <div className='sm:flex gap-4 visible hidden relative mt-1 rounded-md place-items-center font-orbitron text-slate-300 border-l border-t border-r  border-cyan-700/20  '>
+    <div className='md:flex gap-4 visible  hidden relative mt-1 rounded-md place-items-center font-orbitron text-slate-300 border-l border-t border-r  border-cyan-700/20  '>
       <div className='absolute  w-full h-full shadow-[-3px_10px_7px_-6px_rgba(0,0,0,0.3)] shadow-cyan-600/30 animate-pulse z-0 '></div>
       <Link
         
@@ -151,7 +151,7 @@ const MobileNav = ({
     <>
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className='cursor-pointer  order-1 relative  z-20  p-4 mr-2 mt-1  '
+        className='cursor-pointer  order-1 relative w-full  flex  z-20  p-4 mr-4 mt-1  '
       >
         <svg className='h-8 w-8 fill-current' viewBox='0 0 24 24'>
           <path
