@@ -26,17 +26,24 @@ export function contactBackgroundAnimation(
   animationStop: boolean,
   isNotXlMonitor: boolean
 ) {
-  const colors = ['red', 'yellow', 'green', 'cyan', 'purple'];
+  const colorClasses = [
+    'bg-red-500',
+    'bg-yellow-500',
+    'bg-green-500',
+    'bg-cyan-500',
+    'bg-purple-500',
+  ];
+
   const delayTimes = [0, 0.5, 1, 1.5, 2];
   const divCount = isNotXlMonitor ? 25 : 5;
 
   const createDivs = (count: number) => {
     const divs = [];
     for (let i = 0; i < count; i++) {
-      const colorIndex = i % colors.length;
+      const colorIndex = i % colorClasses.length;
       divs.push(
         <motion.div
-          className={`bg-${colors[colorIndex]}-500 grow`}
+          className={`${colorClasses[colorIndex]} grow`}
           variants={childVariant(delayTimes[colorIndex])}
           key={`${animationStop.toString()}${i}`}
         />
