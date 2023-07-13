@@ -81,7 +81,7 @@ const Grid = () => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [activeCells, stop, isInitialized]);
+  }, [activeCells, stop, isInitialized, totalCells]);
   useEffect(() => {
     setActiveCells([startPosition]);
     setStop(false);

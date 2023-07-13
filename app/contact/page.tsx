@@ -6,14 +6,6 @@ import useMediaQuery from '../utils/hooks/use-mediaQuery';
 import { navLayout } from '../utils/motion/motion';
 import { contactBackgroundAnimation } from './contactBackgroundAnimation';
 
-export const pulseContainer = {
-  animate: {
-    transition: {
-      repeat: Infinity,
-    },
-  },
-};
-
 const Contact = () => {
   const isNotXlMonitor = useMediaQuery('(min-width: 1000px)');
 

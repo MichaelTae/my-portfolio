@@ -1,6 +1,13 @@
 'use client';
 import { motion } from 'framer-motion';
-import { pulseContainer } from './page';
+
+const pulseContainer = {
+  animate: {
+    transition: {
+      repeat: Infinity,
+    },
+  },
+};
 
 export function contactBackgroundAnimation(
   changeAnimationGap: number,
