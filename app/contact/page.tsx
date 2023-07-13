@@ -48,7 +48,7 @@ const Contact = () => {
           animationStop,
           isNotXlMonitor
         )}
-        <div className='flex flex-col items-center z-10 bg-slate-900/40 h-full w-full rounded-md font-mono px-2  backdrop-blur-md pt-4'>
+        <div className='flex flex-col items-center z-10 bg-slate-900/40 h-full w-full rounded-md font-orbitron px-2  backdrop-blur-md pt-4'>
           <h1 className='text-4xl font-bold text-lime-500 font-orbitron pb-2'>
             Contact
           </h1>
@@ -73,10 +73,10 @@ const Contact = () => {
                     src='/github-mark-white.svg'
                     width={50}
                     height={50}
-                    className='ml-2 lg:ml-3 '
+                    className='ml-2 lg:ml-5 '
                     alt='github icon'
                   />
-                  <p className='text-lg lg:text-2xl font-bold text-lime-500 font-mono'>
+                  <p className='text-lg lg:text-2xl font-bold text-lime-500 font-orbitron'>
                     Github
                   </p>
                 </a>
@@ -90,10 +90,10 @@ const Contact = () => {
                     src='/linkedin.svg'
                     width={50}
                     height={50}
-                    className='ml-4 lg:ml-5 '
+                    className='ml-4 lg:ml-7 '
                     alt='linkedin icon'
                   />
-                  <p className='text-lg lg:text-2xl font-bold text-lime-500 font-mono'>
+                  <p className='text-lg lg:text-2xl font-bold text-lime-500 font-orbitron'>
                     LinkedIn
                   </p>
                 </a>
@@ -110,7 +110,7 @@ const Contact = () => {
                     className=' lg:ml-2 '
                     alt='Mail icon'
                   />
-                  <p className='text-lg lg:text-2xl font-bold text-lime-500 font-mono'>
+                  <p className='text-lg lg:text-2xl font-bold text-lime-500 font-orbitron'>
                     Email
                   </p>
                 </a>
