@@ -1,8 +1,15 @@
 import { textContainer, textVariant2 } from '../utils/motion/motion';
 import React from 'react';
-import { motion  } from 'framer-motion';
-export const TypingText = ({ title, textStyles,startDelay }:{title:string, textStyles:string,startDelay:number}) => (
-    
+import { motion } from 'framer-motion';
+export const TypingText = ({
+  title,
+  textStyles,
+  startDelay,
+}: {
+  title: string;
+  textStyles: string;
+  startDelay: number;
+}) => (
   <motion.p
     variants={textContainer(startDelay)}
     className={`font-normal text-[14px] text-secondary-white ${textStyles}`}
@@ -16,16 +23,19 @@ export const TypingText = ({ title, textStyles,startDelay }:{title:string, textS
   </motion.p>
 );
 
-export const TitleText = ({ title, textStyles }:{title:string, textStyles:string}) => (
+export const TitleText = ({
+  title,
+  textStyles,
+}: {
+  title: string;
+  textStyles: string;
+}) => (
   <motion.h2
     variants={textVariant2}
-    initial="hidden"
-    whileInView="show"
+    initial='hidden'
+    whileInView='show'
     className={`mt-[5px] font-bold 2xl:text-[57px] text-[30px] xl:text-[36px] md:text-[40px]  ${textStyles}`}
   >
     {title}
   </motion.h2>
 );
-
-
- 

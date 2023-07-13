@@ -1,7 +1,7 @@
 import useMediaQuery from '@/app/utils/hooks/use-mediaQuery';
-import { useState, useEffect, use } from 'react';
+import { useState, useEffect } from 'react';
 
-const GridCell = ({ active, index }: { active: any; index: number }) => {
+const GridCell = ({ active, index }: { active: boolean; index: number }) => {
   const color = [
     'bg-zinc-950',
     'bg-zinc-900',
@@ -31,17 +31,15 @@ const Grid = () => {
   const [isInitialized, setIsInitialized] = useState(false);
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setIsInitialized(true);  
+      setIsInitialized(true);
       setActiveCells([startPosition]);
     }, 2000);
 
     return () => clearTimeout(timeout);
   });
 
-
   useEffect(() => {
     if (stop || !isInitialized) {
-      
       return;
     }
     const interval = setInterval(() => {
@@ -70,7 +68,6 @@ const Grid = () => {
 
         const uniqueActiveCells = Array.from(new Set(nextActiveCells));
 
-
         if (uniqueActiveCells.length >= totalCells) {
           setStop(true);
           const newStartPosition = Math.floor(Math.random() * totalCells);
@@ -84,7 +81,7 @@ const Grid = () => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [activeCells, stop,isInitialized]);
+  }, [activeCells, stop, isInitialized]);
   useEffect(() => {
     setActiveCells([startPosition]);
     setStop(false);

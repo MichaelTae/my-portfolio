@@ -36,16 +36,20 @@ const Controls = ({ audioRef }: { audioRef: any }) => {
     >
       <div className='group  '>
         <div className='flex-col '>
-          <div  className={` ${focused ? 'scale-100 transition-all duration-500 delay-100' : ''} font-orbitron text-lime-300 group-hover:scale-100 scale-0 transition-all duration-500 delay-500`}>
+          <div
+            className={` ${
+              focused ? 'scale-100 transition-all duration-500 delay-100' : ''
+            } font-orbitron text-lime-300 group-hover:scale-100 scale-0 transition-all duration-500 delay-500`}
+          >
             Play Ambiance
           </div>
           <div className='flex gap-2'>
             <button
-            tabIndex={0}
+              tabIndex={0}
               aria-label='Play/Pause'
-              className={`${
-                isPlaying ? 'border-lime-600' : ''
-              } ${focused ? 'scale-100 transition-all duration-500 delay-100' : ''} hover:border-lime-600 rounded-3xl border  border-slate-500/70 w-14 h-14 items-center flex justify-center bg-gradient-to-t from-fuchsia-900 via-purple-800 to-indigo-900  `}
+              className={`${isPlaying ? 'border-lime-600' : ''} ${
+                focused ? 'scale-100 transition-all duration-500 delay-100' : ''
+              } hover:border-lime-600 rounded-3xl border  border-slate-500/70 w-14 h-14 items-center flex justify-center bg-gradient-to-t from-fuchsia-900 via-purple-800 to-indigo-900  `}
               onClick={togglePlayPause}
             >
               {isPlaying ? (
@@ -62,9 +66,9 @@ const Controls = ({ audioRef }: { audioRef: any }) => {
               aria-label='Mute/Unmute'
               tabIndex={0}
               onClick={() => setMuteVolume((prev) => !prev)}
-              className={`${
-                muteVolume ? 'border-lime-600' : ''
-              } ${focused ? 'scale-100 transition-all duration-500 delay-100' : ''} hover:border-lime-600 rounded-3xl border border-slate-500/70 w-14 h-14 items-center flex justify-center bg-gradient-to-t from-fuchsia-900 via-purple-800 to-indigo-900  `}
+              className={`${muteVolume ? 'border-lime-600' : ''} ${
+                focused ? 'scale-100 transition-all duration-500 delay-100' : ''
+              } hover:border-lime-600 rounded-3xl border border-slate-500/70 w-14 h-14 items-center flex justify-center bg-gradient-to-t from-fuchsia-900 via-purple-800 to-indigo-900  `}
             >
               {muteVolume || volume < 1 ? (
                 <IoMdVolumeOff
@@ -83,11 +87,15 @@ const Controls = ({ audioRef }: { audioRef: any }) => {
               )}
             </button>
           </div>
-          <div className={` ${focused ? 'scale-100 transition-all duration-500 delay-100' : ''} font-orbitron text-lime-300 group-hover:scale-100 scale-0 transition-all duration-500 delay-500`}>
+          <div
+            className={` ${
+              focused ? 'scale-100 transition-all duration-500 delay-100' : ''
+            } font-orbitron text-lime-300 group-hover:scale-100 scale-0 transition-all duration-500 delay-500`}
+          >
             Volume Controls
           </div>
         </div>
-        <div className={`  flex gap-2`}>
+        <div className={'  flex gap-2'}>
           <input
             aria-label='Volume Slider'
             className={`${
@@ -106,7 +114,9 @@ const Controls = ({ audioRef }: { audioRef: any }) => {
           />
           <div
             aria-label='Volume amount'
-            className={` ${focused ? 'scale-100 transition-all duration-500 delay-100' : ''} font-orbitron text-lime-300 group-hover:scale-100 scale-0 transition-all duration-500 delay-500`}
+            className={` ${
+              focused ? 'scale-100 transition-all duration-500 delay-100' : ''
+            } font-orbitron text-lime-300 group-hover:scale-100 scale-0 transition-all duration-500 delay-500`}
           >
             {volume}
           </div>
