@@ -25,7 +25,7 @@ const item = {
     filter: 'blur(0px)',
     transition: {
       ease: 'easeInOut',
-      duration: 1,
+      duration: 0.5,
     },
   },
 };

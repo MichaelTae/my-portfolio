@@ -7,7 +7,7 @@ export const BackSvg = ({
   setHighlighted,
 }: {
   highlighted: string;
-  setHighlighted: any;
+  setHighlighted: React.Dispatch<React.SetStateAction<string>>;
 }) => {
   return (
     <>

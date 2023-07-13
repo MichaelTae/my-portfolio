@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { Variants, motion } from 'framer-motion';
 
 interface MobileNavTypes {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   isOpen: boolean;
-  container: any;
-  item: any;
+  container: Variants;
+  item: Variants;
 }
 
 export const MobileNav = ({

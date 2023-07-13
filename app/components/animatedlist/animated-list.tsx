@@ -23,7 +23,7 @@ const AnimatedListItem = ({
 }: {
   title: string;
   action: string;
-  setProjectChoice: Function;
+  setProjectChoice: React.Dispatch<React.SetStateAction<string>>;
 }) => (
   <motion.li
     className={
@@ -39,8 +39,8 @@ const AnimatedList = ({
   items,
   setProjectChoice,
 }: {
-  items: any;
-  setProjectChoice: Function;
+  items: JSX.IntrinsicAttributes & { title: string; action: string }[];
+  setProjectChoice: React.Dispatch<React.SetStateAction<string>>;
 }) => {
   const isNotMobile = useMediaQuery('(min-width: 640px)');
 

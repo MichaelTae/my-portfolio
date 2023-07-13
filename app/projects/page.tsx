@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import AnimatedList from '../components/animatedlist/animated-list';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { useState } from 'react';
 import styles from './projects.module.css';
 import { navLayout } from '../utils/motion/motion';
@@ -138,7 +138,7 @@ const Projects = () => {
           {openImageModal && (
             <ImageModal
               title={selectedItem?.title}
-              image={selectedItem?.image}
+              image={selectedItem?.image as StaticImageData}
               onClose={handleModal}
             />
           )}
@@ -150,7 +150,9 @@ const Projects = () => {
 
 export default Projects;
 
-function animatedListBackground(setProjectChoice: Function) {
+function animatedListBackground(
+  setProjectChoice: React.Dispatch<React.SetStateAction<string>>
+) {
   return (
     <div className='grow  overflow-hidden relative mt-2 '>
       <div className='flex flex-col h-full w-full relative bottom-0 sm:bottom-48 lg:bottom-0'>

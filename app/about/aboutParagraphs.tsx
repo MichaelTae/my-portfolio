@@ -1,4 +1,3 @@
-'use client';
 export const introParagraph =
   'My name is Michael Stojanovic, I am a recent graduate from Nackademin. There I studied Web development for 2 years with a focus on .NET CMS. I very much enjoy programming and getting better at it.';
 export const introParagraph2 =
