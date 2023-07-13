@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const DesktopNav = ({ path }: { path: string }) => {
   return (
-    <div className='md:flex gap-4 visible  hidden relative mt-1 rounded-md place-items-center font-orbitron text-slate-300 border-l border-t border-r  border-cyan-700/20  '>
+    <div className='md:flex gap-4 hidden relative mt-1 rounded-md place-items-center font-orbitron text-slate-300 border-l border-t border-r  border-cyan-700/20  '>
       <div className='absolute  w-full h-full shadow-[-3px_10px_7px_-6px_rgba(0,0,0,0.3)] shadow-cyan-600/30 animate-pulse z-0 ' />
       <Link
         className={`${
