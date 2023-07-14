@@ -6,6 +6,7 @@ interface MobileNavTypes {
   isOpen: boolean;
   container: Variants;
   item: Variants;
+  path: string;
 }
 
 export const MobileNav = ({
@@ -13,6 +14,7 @@ export const MobileNav = ({
   isOpen,
   container,
   item,
+  path,
 }: MobileNavTypes) => {
   return (
     <>
@@ -46,7 +48,10 @@ export const MobileNav = ({
           href='/'
           className='w-full h-full relative border-t pt-2 pb-2 border-lime-500 mt-4 '
         >
-          <motion.li variants={item} className=' w-full h-full  '>
+          <motion.li
+            variants={item}
+            className={`${path === '/' ? 'text-lime-500' : ''} w-full h-full`}
+          >
             Home
           </motion.li>
         </Link>
@@ -55,7 +60,12 @@ export const MobileNav = ({
           href='/projects'
           className='w-full flex relative text-center   border-t pb-2 border-lime-500 pt-2'
         >
-          <motion.li variants={item} className='w-full h-full '>
+          <motion.li
+            variants={item}
+            className={`${
+              path === '/projects' ? 'text-lime-500' : ''
+            } w-full h-full`}
+          >
             Projects
           </motion.li>
         </Link>
@@ -64,7 +74,12 @@ export const MobileNav = ({
           href='/about'
           className='w-full relative border-t   pb-2 border-lime-500 pt-2'
         >
-          <motion.li variants={item} className=' w-full h-full '>
+          <motion.li
+            variants={item}
+            className={`${
+              path === '/about' ? 'text-lime-500' : ''
+            } w-full h-full`}
+          >
             About
           </motion.li>
         </Link>
@@ -73,7 +88,12 @@ export const MobileNav = ({
           href='/contact'
           className='w-full relative flex  border-t  border-lime-500 pt-2 pb-2'
         >
-          <motion.li variants={item} className='   w-full h-full '>
+          <motion.li
+            variants={item}
+            className={`${
+              path === '/contact' ? 'text-lime-500' : ''
+            } w-full h-full`}
+          >
             Contact
           </motion.li>
         </Link>

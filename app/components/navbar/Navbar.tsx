@@ -57,6 +57,7 @@ const Navbar = () => {
             isOpen={isOpen}
             container={container}
             item={item}
+            path={path}
           />
         </div>
 
