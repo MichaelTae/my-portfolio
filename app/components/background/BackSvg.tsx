@@ -5,9 +5,11 @@ import Link from 'next/link';
 export const BackSvg = ({
   highlighted,
   setHighlighted,
+  mediaQuery,
 }: {
   highlighted: string;
   setHighlighted: React.Dispatch<React.SetStateAction<string>>;
+  mediaQuery: boolean;
 }) => {
   return (
     <>
@@ -17,15 +19,15 @@ export const BackSvg = ({
         x='0px'
         y='0px'
         viewBox='0 0 1920 1080'
-        className=' h-screen w-full absolute  '
-        preserveAspectRatio='none'
+        className=' h-screen w-full absolute '
+        preserveAspectRatio={`${mediaQuery ? 'none' : 'xMidYMax slice'}`}
       >
         <image
           overflow='visible'
           width='2122'
           className='absolute pointer-events-none '
           height='1080'
-          xlinkHref='/BackGround.jpg'
+          href='/BackGround.jpg'
           transform='matrix(1 0 0 1 -101 0)'
           aria-label='Background Image'
         />

@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { TitleText, TypingText } from './components/custom-text';
 import { motion } from 'framer-motion';
-import { fadeIn } from './utils/motion/motion';
+import { fadeIn, navLayout } from './utils/motion/motion';
 import BackgroundWrapper from './components/background/backgroundWrapper';
 export default function Home() {
   return (
