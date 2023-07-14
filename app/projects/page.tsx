@@ -154,14 +154,14 @@ function animatedListBackground(
   setProjectChoice: React.Dispatch<React.SetStateAction<string>>
 ) {
   return (
-    <div className='grow  overflow-hidden relative mt-2 '>
-      <div className='flex flex-col h-full w-full relative bottom-0 sm:bottom-48 lg:bottom-0'>
+    <div className='grow  overflow-hidden relative mt-2  '>
+      <div className='flex flex-col h-full w-full relative bottom-0 sm:bottom-48 lg:bottom-0 '>
         <div className=' px-2 basis-1/6 pt-12 z-10 '>
           <AnimatedList items={items} setProjectChoice={setProjectChoice} />
         </div>
       </div>
       <motion.div
-        className='border-2 flex  basis-5/6  absolute  blur-[3px] flex-col-reverse z-0  top-0 bottom-0 right-0 left-0 '
+        className='border-2 flex  basis-5/6  absolute blur-[2px]  flex-col-reverse z-0  top-0 bottom-0 right-0 left-0 '
         variants={container}
         initial='hidden'
         animate='show'
@@ -170,7 +170,7 @@ function animatedListBackground(
           <motion.div
             key={i}
             variants={item}
-            className='grow  basis-1/6 bg-no-repeat bg-cover '
+            className='grow  basis-1/6 bg-no-repeat bg-cover  contrast-150'
             style={{
               backgroundImage: `url(${image})`,
               backgroundPosition: `0% ${(9 - i) * 10}%`,
