@@ -43,60 +43,63 @@ export const MobileNav = ({
           isOpen ? 'visible' : 'hidden'
         }  absolute text-center  top-4 right-5 border text-xl bg-slate-900/60   backdrop-blur-sm flex flex-col   pt-12 w-36 rounded-md font-orbitron`}
       >
-        <Link
-          onClick={() => setIsOpen(!isOpen)}
-          href='/'
-          className='w-full h-full relative border-t pt-2 pb-2 border-lime-500 mt-4 '
+        <motion.li
+          variants={item}
+          className={`${path === '/' ? 'text-lime-500' : ''} w-full h-full`}
         >
-          <motion.li
-            variants={item}
-            className={`${path === '/' ? 'text-lime-500' : ''} w-full h-full`}
+          <Link
+            onClick={() => setIsOpen(!isOpen)}
+            href='/'
+            className='w-full h-full flex  justify-center border-t pt-2 pb-2 border-lime-500 mt-4 '
           >
             Home
-          </motion.li>
-        </Link>
-        <Link
-          onClick={() => setIsOpen(!isOpen)}
-          href='/projects'
-          className='w-full flex relative text-center   border-t pb-2 border-lime-500 pt-2'
+          </Link>
+        </motion.li>
+
+        <motion.li
+          variants={item}
+          className={`${
+            path === '/projects' ? 'text-lime-500' : ''
+          } w-full h-full `}
         >
-          <motion.li
-            variants={item}
-            className={`${
-              path === '/projects' ? 'text-lime-500' : ''
-            } w-full h-full`}
+          <Link
+            onClick={() => setIsOpen(!isOpen)}
+            href='/projects'
+            className='w-full flex  justify-center  border-t pb-2 border-lime-500 pt-2'
           >
             Projects
-          </motion.li>
-        </Link>
-        <Link
-          onClick={() => setIsOpen(!isOpen)}
-          href='/about'
-          className='w-full relative border-t   pb-2 border-lime-500 pt-2'
+          </Link>
+        </motion.li>
+
+        <motion.li
+          variants={item}
+          className={`${
+            path === '/about' ? 'text-lime-500' : ''
+          } w-full h-full`}
         >
-          <motion.li
-            variants={item}
-            className={`${
-              path === '/about' ? 'text-lime-500' : ''
-            } w-full h-full`}
+          <Link
+            onClick={() => setIsOpen(!isOpen)}
+            href='/about'
+            className='w-full flex  justify-center  border-t   pb-2 border-lime-500 pt-2'
           >
             About
-          </motion.li>
-        </Link>
-        <Link
-          onClick={() => setIsOpen(!isOpen)}
-          href='/contact'
-          className='w-full relative flex  border-t  border-lime-500 pt-2 pb-2'
+          </Link>
+        </motion.li>
+
+        <motion.li
+          variants={item}
+          className={`${
+            path === '/contact' ? 'text-lime-500' : ''
+          } w-full h-full`}
         >
-          <motion.li
-            variants={item}
-            className={`${
-              path === '/contact' ? 'text-lime-500' : ''
-            } w-full h-full`}
+          <Link
+            onClick={() => setIsOpen(!isOpen)}
+            href='/contact'
+            className='w-full flex  justify-center   border-t  border-lime-500 pt-2 pb-2'
           >
             Contact
-          </motion.li>
-        </Link>
+          </Link>
+        </motion.li>
       </motion.ul>
     </>
   );
