@@ -25,21 +25,21 @@ const AnimatedListItem = ({
   action: string;
   setProjectChoice: React.Dispatch<React.SetStateAction<string>>;
 }) => (
-  <motion.li
-    className={
-      'py-1 px-1 sm:py-2 lg:px-4 text-lime-500 font-orbitron font-semibold cursor-pointer  text-sm sm:text-md lg:text-lg text-center border border-lime-500 rounded-md backdrop-filter backdrop-blur-sm backdrop-brightness-50 -backdrop-hue-rotate-90  hover:bg-opacity-40 hover:bg-lime-500 hover:text-white transition-all hover:scale-105 active:scale-100 '
-    }
-    onClick={() => setProjectChoice(action)}
-    tabIndex={0}
-    role='button'
-    onKeyDown={(e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        setProjectChoice(action);
+  <motion.li>
+    <button
+      className={
+        'py-1 px-1 sm:py-2 lg:px-0  text-lime-500 font-orbitron font-semibold cursor-pointer w-full text-sm sm:text-md  2xl:text-lg text-center border border-lime-500 rounded-md backdrop-filter backdrop-blur-sm backdrop-brightness-50 -backdrop-hue-rotate-90  hover:bg-opacity-40 hover:bg-lime-500 hover:text-white transition-all hover:scale-105 active:scale-100 '
       }
-    }}
-    aria-label={`view ${title} project`}
-  >
-    {title}
+      onClick={() => setProjectChoice(action)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          setProjectChoice(action);
+        }
+      }}
+      aria-label={`view ${title} project`}
+    >
+      {title}
+    </button>
   </motion.li>
 );
 
