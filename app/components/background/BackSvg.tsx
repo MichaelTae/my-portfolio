@@ -33,7 +33,7 @@ export const BackSvg = ({
         />
         <Link href='/projects' tabIndex={0}>
           <g
-            id='x3C_Projects_x3E_ '
+            id='group_x3C_Projects_x3E_'
             className='group z-50 font-orbitron cursor-pointer '
           >
             <g className='group-hover:scale-105 transition-all duration-1000 '>
