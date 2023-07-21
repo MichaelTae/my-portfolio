@@ -32,7 +32,6 @@ const Controls = ({ audioRef }: { audioRef: any }) => {
       tabIndex={0}
       onFocus={() => setFocused(true)}
       onBlur={() => setFocused(false)}
-      aria-label='Audio Controls'
     >
       <div className='group  '>
         <div className='flex-col '>
@@ -113,13 +112,16 @@ const Controls = ({ audioRef }: { audioRef: any }) => {
             onChange={(e) => setVolume(e.target.valueAsNumber)}
           />
           <div
-            aria-label='Volume amount'
+            aria-describedby='volumeDescription'
             className={` ${
               focused ? 'scale-100 transition-all duration-500 delay-100' : ''
             } font-orbitron text-lime-300 group-hover:scale-100 scale-0 transition-all duration-500 delay-500`}
           >
             {volume}
           </div>
+          <span id='volumeDescription' className='sr-only  '>
+            Volume amount
+          </span>
         </div>
       </div>
     </div>
