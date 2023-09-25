@@ -88,7 +88,7 @@ const Projects = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className='justify-center  flex  border-t z-10 border-lime-500  p-4  '
+            className='justify-center  flex-col col-span-2  border-t z-10 border-lime-500  p-4  '
           >
             {!isNotMobile &&
               selectedItem &&
@@ -105,6 +105,8 @@ const Projects = () => {
                 </button>
               )}
             {isNotMobile && selectedItem && selectedItem?.content}
+            {isNotMobile && selectedItem && selectedItem?.link}
+            {!isNotMobile && selectedItem && isExpanded && selectedItem?.link}
           </motion.div>
         </AnimatePresence>
         <AnimatePresence mode='wait'>

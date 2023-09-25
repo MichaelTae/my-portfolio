@@ -10,7 +10,7 @@ export const items = [
     action: 'Action 1',
     image: managementSoftware,
     content:
-      "This is the work I did for my exam. It is more of a mockup/prototype than a finished project. The project is based on the work I did at Swedcon during my internship, for a project called Carelyo. In short, the application consumes an API, which I also created, and displays metrics regarding the users. Not shown in the images is the User/Revenue table where users' information is displayed along with the revenue from the tickets that have been sold. The backend is built with C# .Net 6 and Entity Framework, while the frontend is built with React + Vite.",
+      'This is the work I did for my exam. It is more of a mockup/prototype than a finished project. The project is based on the work I did at Swedcon during my internship, for a project called Carelyo. In short, the application consumes an API, which I also created, and displays metrics regarding the users. Not shown in the images is the User/Revenue table where users information is displayed along with the revenue from the tickets that have been sold. The backend is built with C# .Net 6 and Entity Framework, while the frontend is built with React + Vite.',
     alt: 'Picture of user management website',
   },
   {
@@ -18,8 +18,20 @@ export const items = [
     action: 'Action 2',
     image: leMondays,
     content:
-      "This website is built using React + Vite and hosted on Netlify. It serves as a hub for the band Le Mondays, featuring a set of links with animations shown on the full site. You can visit the site at le-mondays.com if you're interested in seeing it live.",
+      'This website is built using React + Vite and hosted on Netlify. It serves as a hub for the band Le Mondays, featuring a set of links with animations shown on the full site. ',
     alt: 'Picture of website le-mondays',
+    link: (
+      <span>
+        You can visit the site here:&nbsp;
+        <a
+          href='https://le-mondays.com'
+          target='_blank'
+          className='text-sky-500 hover:underline'
+        >
+          le-mondays.com
+        </a>
+      </span>
+    ),
   },
   {
     title: 'Carelyo Dashboard',
@@ -42,7 +54,7 @@ export const items = [
     action: 'Action 5',
     image: jewelPage,
     content:
-      'This website is built using React + Vite with Tailwind. I created this during my internship, and as of now, I am unaware if the website has been deployed. It is an e-commerce site for a jeweler, incorporating a lot of animation and components to make the site stand out. All the functionality is there except, at the time of creation, no backend existed and there was no login/ability to purchase.',
+      'This website is built using React + Vite with Tailwind. I created this during my internship. It is an e-commerce site for a jeweler, incorporating a lot of animation and components to make the site stand out. All the functionality is there except, at the time of creation, no backend existed and there was no login/ability to purchase.',
     alt: 'picture of untitled jewelry page',
   },
 ];
