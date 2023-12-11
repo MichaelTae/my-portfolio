@@ -20,11 +20,11 @@ const AboutPage = () => {
       initial='hidden'
       animate='show'
       variants={navLayout}
-      className=' flex-1 h-screen gap-3  relative   '
+      className=' flex-1 h-screen gap-3 relative'
     >
       <Grid />
-      <div className='flex  relative backdrop-blur-[2px] 2xl:flex-row xl:min-h-[40rem] justify-around items-center gap-4 flex-col 2xl:m-12 m-8  bg-slate-700/20 border border-slate-500 rounded-lg  p-4 text-lg '>
-        <div className=' absolute  border  w-full h-full blur-sm   bg-slate-700/40  rounded-lg  p-2 '>
+      <div className='flex  relative backdrop-blur-[2px] 2xl:flex-row xl:min-h-[40rem] justify-around items-center gap-4 flex-col 2xl:m-12 m-8 bg-slate-700/20 border border-slate-500 rounded-lg  p-4 text-lg '>
+        <div className=' absolute  border  w-full h-full blur-sm bg-slate-700/40  rounded-lg  p-2 '>
           {' '}
         </div>
         <div className='flex-1 self-start relative  hover:scale-[1.02] transition '>
@@ -104,19 +104,19 @@ const AboutPage = () => {
               alt='github logo svg'
               width={500}
               height={400}
-              className='h-40 w-40 mt-44 rounded-[10rem]   rotate-180 opacity-[0.05] -scale-x-100'
+              className='h-40 w-40 mt-44 rounded-[10rem] rotate-180 opacity-[0.05] -scale-x-100'
             />
           </a>
         </div>
 
         <div className='flex-1 self-start relative hover:scale-[1.02] transition-all mt-32 2xl:mt-0 '>
-          <div className='absolute inset-0  z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl'></div>
+          <div className='absolute inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl'></div>
 
           <motion.div
             viewport={{ once: true }}
             initial='hidden'
             whileInView='show'
-            className='p-2 flex    text-slate-300 bg-slate-900/50    rounded-xl z-20 relative '
+            className='p-2 flex text-slate-300 bg-slate-900/50 rounded-xl z-20 relative '
           >
             <motion.p
               viewport={{ once: true }}
@@ -134,13 +134,13 @@ const AboutPage = () => {
           viewport={{ once: true }}
           initial='hidden'
           whileInView='show'
-          className='flex-1 w-full self-end  relative my-4 sm:my-0 2xl:my-2   hover:scale-[1.02] transition '
+          className='flex-1 w-full self-end  relative my-4 sm:my-0 2xl:my-2 hover:scale-[1.02] transition '
         >
           <div className='absolute inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl'></div>
           <motion.p
             viewport={{ once: true }}
             variants={fadeIn('down', 'ease-in', 3 * 0.5, 0.75)}
-            className='p-2  text-slate-300 bg-slate-900/50    rounded-t-xl z-20 relative'
+            className='p-2  text-slate-300 bg-slate-900/50 rounded-t-xl z-20 relative'
           >
             {deployedParagraph1}{' '}
             <a
@@ -156,17 +156,17 @@ const AboutPage = () => {
               ' which is just a static website with links for the band Le mondays, and of course this website'
             }
             textStyles={
-              'p-2  text-lg  text-slate-300 bg-slate-900/50    rounded-b-xl z-20 relative'
+              'p-2 text-lg text-slate-300 bg-slate-900/50 rounded-b-xl z-20 relative'
             }
             startDelay={4}
           />
         </motion.div>
-        <div className='flex-1  self-start relative hover:scale-[1.02] transition  bg-slate-900/50   rounded-xl max-w-full min-w-0 '>
+        <div className='flex-1  self-start relative hover:scale-[1.02] transition bg-slate-900/50 rounded-xl max-w-full min-w-0'>
           <div className='absolute flex inset-0 z-10 place-self-center shadow-md shadow-blue-500 animate-pulse border-teal-700 border rounded-xl '></div>
           <motion.div
             viewport={{ once: true }}
             variants={fadeIn('down', 'ease-in', 5 * 0.5, 0.75)}
-            className='  overflow-hidden p-2   text-slate-300   z-20 '
+            className='  overflow-hidden p-2 text-slate-300 z-20 '
           >
             {symmetryParagraph}
           </motion.div>
