@@ -41,14 +41,7 @@ export const items = [
       'This is the website I worked on during my internship. It is built using React + Vite. The web app serves as an internal system that, similar to my exam work, displays information and relevant metrics for the admin regarding users. I contributed to most parts of the website, but I spent the most time working on the dashboard. The dashboard uses react-grid-layout to allow the user to create their own widgets and set their size and location within the dashboard container. Users can open a menu where they are prompted to specify the type of component they want to add and the information they want to display. In total, I committed around 20,000 lines of code just for this site.',
     alt: 'Picture of Carelyo Dashboard',
   },
-  {
-    title: 'E-commerce School Project',
-    action: 'Action 4',
-    image: Ecommerce,
-    content:
-      "This is an old school project that I created. Sadly, I no longer have the database and recreating it is more trouble than it's worth, so I can't show much. In essence, the website was created using C#; it is an MVC that consumes an API, both of which I created. The website incorporates session helpers for a cart when a user adds an item to it. It also uses Identity to verify users and store user information. In short, it is an e-commerce site, and the only functionality that is missing is the ability to purchase items.",
-    alt: 'Picture of e-commerce school project',
-  },
+
   {
     title: 'Untitled Jewelry Website',
     action: 'Action 5',
