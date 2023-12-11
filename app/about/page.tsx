@@ -11,7 +11,6 @@ import {
   languageParagraph2,
   siteParagraph1,
   siteParagraph2,
-  siteParagraph3,
   deployedParagraph1,
   symmetryParagraph,
 } from './aboutParagraphs';
@@ -128,12 +127,6 @@ const AboutPage = () => {
                 {' '}
                 {siteParagraph2}
               </motion.span>
-              <motion.span
-                viewport={{ once: true }}
-                variants={fadeIn('right', 'ease-in', 5 * 0.5, 0.75)}
-              >
-                {siteParagraph3}
-              </motion.span>{' '}
             </motion.p>
           </motion.div>
         </div>
