@@ -6,7 +6,6 @@ const inter = Inter({ subsets: ['latin'] });
 const orbitron = Orbitron({
   variable: '--font-orbitron',
   subsets: ['latin'],
-  preload: true,
 });
 
 export const metadata = {
