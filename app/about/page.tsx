@@ -53,7 +53,7 @@ const AboutPage = () => {
             <TypingText
               title={introParagraph2}
               textStyles={
-                'p-2    text-slate-300 bg-slate-900/50    rounded-xl z-20 relative text-lg '
+                'p-2 text-slate-300 bg-slate-900/50 rounded-xl z-20 relative text-lg '
               }
               startDelay={0}
             />
