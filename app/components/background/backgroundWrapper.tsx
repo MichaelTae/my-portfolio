@@ -10,7 +10,7 @@ const BackgroundWrapper = () => {
   const isNotMobile = useMediaQuery('(min-width: 815px)');
 
   return (
-    <div className=' z-0 relative h-[100vh] overflow-hidden '>
+    <div className=' z-0 relative h-[92.5vh] overflow-hidden '>
       <RainAnimation />
       <BackSvg
         highlighted={highlighted}
