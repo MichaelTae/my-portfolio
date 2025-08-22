@@ -30,16 +30,17 @@ const AboutPage = () => {
             currently available for work. My passion lies in Frontend
             development, and I spend most of my time in the Javascript/React
             ecosystem. This website was built as a personal project to showcase
-            my skills and experience. Its Created using React, Next.js, Tailwind
-            CSS, and Framer Motion for animations. So far I've launched two
-            websites, This one and one for a band called Lemondays. I'm born and
-            raised in Stockholm, Sweden and its where i currently live as well.
-            If you have any exciting opportunities or projects that you think I
-            would be a good fit for, please feel free to reach out, my contact
-            information is available in the contact section.
+            my skills and experience. It&apos;s Created using React, Next.js,
+            Tailwind CSS, and Framer Motion for animations. So far I&apos;ve
+            launched two websites, This one and one for a band called Lemondays.
+            I&apos;m born and raised in Stockholm, Sweden and it&apos;s where i
+            currently live as well. If you have any exciting opportunities or
+            projects that you think I would be a good fit for, please feel free
+            to reach out, my contact information is available in the contact
+            section.
             <br />
             <br />
-            If you'd like to read more about my work experience as well as
+            If you&apos;d like to read more about my work experience as well as
             education you can view my Resume down below.
           </motion.div>
         </div>
