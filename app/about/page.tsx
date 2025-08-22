@@ -20,7 +20,7 @@ const AboutPage = () => {
           <div className='absolute inset-0 z-10  place-self-center shadow-md shadow-blue-500 border-teal-700 border rounded-xl animate-pulse w-full h-full'></div>
 
           <motion.div
-            variants={fadeIn('down', 'ease-in', 1 * 0.5, 0.75)}
+            variants={fadeIn('down', 'tween', 1 * 0.5, 0.75)}
             initial='hidden'
             whileInView={'show'}
             className='p-2   text-slate-300  z-20 relative bg-slate-900/50   rounded-xl '
@@ -48,7 +48,7 @@ const AboutPage = () => {
           <div className='absolute inset-0 z-10  place-self-center shadow-md shadow-blue-500 border-teal-700 border rounded-xl animate-pulse p-6 w-full h-full'></div>
 
           <motion.div
-            variants={fadeIn('down', 'ease-in', 1 * 0.5, 0.75)}
+            variants={fadeIn('down', 'tween', 1 * 0.5, 0.75)}
             initial='hidden'
             whileInView={'show'}
             className='p-2   text-slate-300  z-20 relative bg-slate-900/50   rounded-xl'

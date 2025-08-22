@@ -7,13 +7,17 @@ const variants = {
   visible: {
     opacity: 1,
     y: 200,
-    transition: { duration: 0.5, ease: 'easeIn' },
+    transition: { duration: 0.5, ease: [0.47, 0, 0.745, 0.715] as const },
   },
 };
 
 const variantsMobile = {
   hidden: { opacity: 0, y: 200 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeIn' } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.47, 0, 0.745, 0.715] as const },
+  },
 };
 
 const AnimatedListItem = ({

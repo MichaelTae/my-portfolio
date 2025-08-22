@@ -11,7 +11,7 @@ const container = {
     opacity: 1,
     transition: {
       staggerChildren: 0.2,
-      ease: 'easeInOut',
+      ease: [0.645, 0.045, 0.355, 1] as const,
       duration: 1,
     },
   },
@@ -24,7 +24,7 @@ const item = {
     opacity: 1,
     filter: 'blur(0px)',
     transition: {
-      ease: 'easeInOut',
+      ease: [0.645, 0.045, 0.355, 1] as const,
       duration: 0.5,
     },
   },

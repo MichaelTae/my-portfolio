@@ -16,7 +16,7 @@ const ImageModal = ({
       opacity: 1,
 
       transition: {
-        ease: 'easeInOut',
+        ease: [0.645, 0.045, 0.355, 1] as const,
         duration: 0.5,
       },
     },

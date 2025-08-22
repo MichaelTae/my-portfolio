@@ -17,7 +17,7 @@ export function contactBackgroundAnimation(
       y: number | number[];
       transition: {
         duration: number;
-        ease: number[];
+        ease: any;
         repeat: number;
         delay: number;
       };
@@ -41,10 +41,11 @@ export function contactBackgroundAnimation(
     const divs = [];
     for (let i = 0; i < count; i++) {
       const colorIndex = i % colorClasses.length;
+      const variant = childVariant(delayTimes[colorIndex]);
       divs.push(
         <motion.div
           className={`${colorClasses[colorIndex]} grow`}
-          variants={childVariant(delayTimes[colorIndex])}
+          animate={variant.animate}
           key={`${animationStop.toString()}${i}`}
         />
       );

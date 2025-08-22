@@ -27,7 +27,7 @@ const Contact = () => {
       y: animationStop ? 0 : [0, 30, 0],
       transition: {
         duration: 4,
-        ease: [0.4, 0, 0.6, 1],
+        ease: 'easeInOut' as const,
         repeat: Infinity,
         delay,
       },
